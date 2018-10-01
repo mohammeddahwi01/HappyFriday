@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Sistel
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the sistel.com license
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ *
+ * @category    Paymen Methods - Redsys
+ * @package     Sistel_Redsys
+ * @author      Juan Pedro Barba Soler || Developer at Sistel, Servicios Informáticos de Software y Telecomunicaciones
+ * @copyright   Copyright (c) 2016 Sistel (http://www.sistel.es/)
+ * @license     See root folder of this extension
+**/
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <title>Redsys no responde</title>
+    </head>
+    <body>
+      <referenceContainer name="content">
+  		    <block class="Sistel\Redsys\Block\Redsys\Result" name="redsys_result" template="Sistel_Redsys::result.phtml" />
+  		</referenceContainer>
+    </body>
+</page>

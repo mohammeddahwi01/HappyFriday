@@ -1,0 +1,15 @@
+[19-Jul-2018 11:55:58 UTC] PHP Fatal error:  Uncaught RuntimeException: Can't create directory /home/hythoscr2/public_html/generated/code/Magento/Framework/App/ResourceConnection/. in [Magento\Framework\App\ResourceConnection\Proxy] in /home/hythoscr2/public_html/vendor/magento/framework/Code/Generator.php:115
+Stack trace:
+#0 /home/hythoscr2/public_html/vendor/magento/framework/Code/Generator/Autoloader.php(35): Magento\Framework\Code\Generator->generateClass('Magento\\Framewo...')
+#1 [internal function]: Magento\Framework\Code\Generator\Autoloader->load('Magento\\Framewo...')
+#2 [internal function]: spl_autoload_call('Magento\\Framewo...')
+#3 /home/hythoscr2/public_html/vendor/magento/framework/Code/Reader/ClassReader.php(19): ReflectionClass->__construct('Magento\\Framewo...')
+#4 /home/hythoscr2/public_html/vendor/magento/framework/ObjectManager/Definition/Runtime.php(44): Magento\Framework\Code\Reader\ClassReader->getConstructor('Magento\\Framewo...')
+#5 /home/hythoscr2/public_html/vendor/magento/framework/ObjectManager/Factory/Dynamic/Developer.php( in /home/hythoscr2/public_html/vendor/magento/framework/Code/Generator.php on line 115
+[26-Jul-2018 13:31:16 UTC] PHP Fatal error:  Uncaught RuntimeException: Can't create directory /home/hythoscr2/public_html/generated/code/Magento/Framework/Cache/Config/Reader/. in [Magento\Framework\Cache\Config\Reader\Proxy] in /home/hythoscr2/public_html/vendor/magento/framework/Code/Generator.php:115
+Stack trace:
+#0 /home/hythoscr2/public_html/vendor/magento/framework/Code/Generator/Autoloader.php(35): Magento\Framework\Code\Generator->generateClass('Magento\\Framewo...')
+#1 [internal function]: Magento\Framework\Code\Generator\Autoloader->load('Magento\\Framewo...')
+#2 /home/hythoscr2/public_html/vendor/magento/framework/ObjectManager/Factory/AbstractFactory.php(111): spl_autoload_call('Magento\\Framewo...')
+#3 /home/hythoscr2/public_html/vendor/magento/framework/ObjectManager/Factory/Compiled.php(108): Magento\Framework\ObjectManager\Factory\AbstractFactory->createObject('Magento\\Framewo...', Array)
+#4 /home/hythoscr2/public_html/vendor/magento/framework/ObjectManager/Factory/Compiled.php(150): Magento\Framework\ObjectManager\Factory\Compiled->cr in /home/hythoscr2/public_html/vendor/magento/framework/Code/Generator.php on line 115

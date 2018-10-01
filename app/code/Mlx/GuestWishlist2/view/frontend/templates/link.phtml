@@ -1,0 +1,11 @@
+<?php
+if (!$block->isLoggedIn()) :
+?>
+
+<li class="wishlist-link">
+    <a href="<?php echo $this->getHref(); ?>">
+        <?php echo $block->escapeHtml($block->getLabel()); ?>
+    </a>
+</li>
+
+<?php endif; ?>

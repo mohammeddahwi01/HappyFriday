@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Sistel
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the sistel.com license
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ *
+ * @category    Paymen Methods - Redsys
+ * @package     Sistel_Redsys
+ * @author      Juan Pedro Barba Soler || Developer at Sistel, Servicios Informáticos de Software y Telecomunicaciones
+ * @copyright   Copyright (c) 2016 Sistel (http://www.sistel.es/)
+ * @license     See root folder of this extension
+**/
+-->
+<include xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_include.xsd">
+    <group id="order_settings" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+        <label><![CDATA[Order Redsys Settings]]></label>
+        <frontend_model>Magento\Config\Block\System\Config\Form\Fieldset</frontend_model>
+            <field id="new_order_notify" translate="label tooltip" type="select" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Notify After Pay</label>
+                <tooltip><![CDATA[If this option is active, Magento will Notify after Customer Payment.]]></tooltip>
+                <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+            </field>
+            <field id="success_payment_stock_update" translate="label tooltip" type="select" sortOrder="7" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Subtract Stock only when Success Payment</label>
+                <tooltip><![CDATA[Magento subtract by default at PlaceOrder. With that option, your sotck will be updated only at success payment(Recommended only with Backorders)]]></tooltip>
+                <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+            </field>
+            <field id="payment_status" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Order Status before Customer Pay</label>
+                <source_model>Sistel\Redsys\Model\System\Config\Source\PaymentStatus</source_model>
+            </field>
+            <field id="pay_error" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Keep Quote if got some error/cancel Payment</label>
+                <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+            </field>
+            <!-- Generate Invoice -->
+            <field id="generate_invoice" translate="label" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Auto Generate Invoice</label>
+                <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+            </field>
+            <field id="customer_notify_invoice" translate="label" type="select" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Auto Send Invoice</label>
+                <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+            </field>
+            <!-- TODO
+            <field id="customer_notify_payment" translate="label" type="select" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="0">
+                <label>Customer Notify Payment</label>
+                <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+            </field>
+            <field id="payment_message" translate="label" type="textarea" sortOrder="170" showInDefault="1" showInWebsite="1" showInStore="0">
+                <label>Acepted Payment Message</label>
+            </field>
+            -->
+    </group>
+</include>

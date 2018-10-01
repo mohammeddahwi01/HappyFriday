@@ -1,0 +1,14 @@
+<?php
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2018 Amasty (https://www.amasty.com)
+ * @package Amasty_Conf
+ */
+?>
+<script>
+    require([
+        'jquery'
+    ], function ($) {
+        window.amasty_conf_config = <?php echo $block->getConfig(); ?>;
+    });
+</script>

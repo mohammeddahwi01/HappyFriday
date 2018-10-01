@@ -1,0 +1,66 @@
+<?php
+    $modules = $this->getModules();
+    
+?>
+<div id="mlx_core_license">
+	<?php foreach($modules as $module) : ?>
+	<div class="entry">
+		
+        	<?php $ext = $module['short']; ?>
+        	<div class="entry-head">
+        		<h2><?php echo $module['title']; ?> - <small><?php echo __('Version: %1', $module['setup_version']);?></small></h2>		
+        	</div>
+        	<div class="entry-content">
+        			<?php foreach ($this->getDomains() as $domain) : ?>
+        			<form id="mlx_form_<?php echo $ext ?>" action="<?php echo $this->getUrl('mlx/license/install'); ?>" method="post">				
+            			<div>
+                    		<input name="form_key" type="hidden" value="<?php echo $this->getFormKey(); ?>" />
+                    		<input name="name" type="hidden" value="<?php echo $ext; ?>" />
+                    		<input type="hidden" name="domain" value="<?php echo $domain; ?>" />
+                    	</div>
+            			<table cellspacing="0" class="form-list">
+            				<tbody>  
+            					<tr>        						
+            						<td class="value">        							
+            							<div ><h3 style="color: #007bdb; margin:0; padding:0;"><?php echo $domain; ?> <?php if($this->isInstalled($ext, $domain)) : ?><span class="installed status">[Installed]</span><?php else : ?><span class="notinstall status">[No Install]</span><?php endif; ?></h3></div>
+            						</td>
+            					</tr>        					
+            					<tr>        						
+            						<td class="value">
+            							<input style="width: 750px; padding: 0.55rem 1.4rem 0.55rem; margin-right: 5px;" id="key_<?php echo $ext ?>" name="license_key" value="<?php echo $this->getKey($ext,$domain); ?>" type="text" class="input-text required-entry" />
+            							<button class="action-default primary add" type="submit"><span><span><span>Install License</span></span></span></button>
+            						</td>        						
+            					</tr>          					      						
+            				  					
+            				</tbody>
+            			</table>
+            			<div style="border-bottom: 1px dashed #c9c9c9; width: 100%; padding-bottom: 15px; margin-bottom: 15px;"></div>
+        			</form>
+        			<?php endforeach;?>
+        			
+        			<?php if($this->isInstalled($ext, $domain) && $optionUpgrade = $this->getOptionUpgrade($ext, $this->getKey($ext,$domain)) ) : ?>
+        			<?php //echo $this->getOptionUpgrade($ext, $this->getKey($ext,$domain)); ?>
+        			<form target="_blank" action="<?php echo $this->getUrl('http://www.mlx-store.com/license/license/upgrade'); ?>" method="post" name="mlx.license.upgrade.<?php echo $ext?>" id="mlx_license_upgrade_<?php echo $ext?>">
+        				<input type="hidden" value="<?php echo $this->getKey($ext,$domain); ?>" name="licensekey" />
+        				
+            			<table cellspacing="0" class="form-list" width="100%">
+            				<tr>
+        						<td class="value">
+        							<ul style="list-style: none; margin:0 0 25px 0; pading:0;">
+        								<?php echo $optionUpgrade; ?>
+    	    						</ul>
+        							<button class="action-default primary add" type="submit"><span><span><span>Upgrade License</span></span></span></button>    							
+        						</td>
+        					</tr>
+            			</table>
+        			</form>
+        			<?php endif; ?>
+        			
+        	</div>
+        
+	</div>
+	<?php endforeach; ?>
+	<?php if(!count($modules)) : ?>
+	<p><?php echo __('There are no extension.'); ?></p>
+	<?php endif; ?>    
+</div>

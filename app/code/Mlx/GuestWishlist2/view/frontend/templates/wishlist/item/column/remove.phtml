@@ -1,0 +1,10 @@
+<?php
+
+
+// @codingStandardsIgnoreFile
+//echo get_class($block); exit();
+?>
+
+<a href="javascript:void();" data-wishlist='<?php /* @escapeNotVerified */ echo $block->getItemRemoveParams($block->getItem()); ?>' title="<?php /* @escapeNotVerified */ echo __('Remove Item') ?>" class="btn-remove action delete">
+    <span><?php /* @escapeNotVerified */ echo __('Remove item');?></span>
+</a>

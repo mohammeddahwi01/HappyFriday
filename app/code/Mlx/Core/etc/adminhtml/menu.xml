@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+
+    <menu>        
+        <add id="Mlx_Core::main" title="MLX" module="Mlx_Core" sortOrder="9999" dependsOnModule="Mlx_Core" resource="Mlx_Core::main"/>        
+        <add id="Mlx_Core::manager_license" title="Manage License Key" module="Mlx_Core" sortOrder="0" parent="Mlx_Core::main" action="mlx/license/index" resource="Mlx_Core::manager_license"/>
+        
+     
+    </menu>
+    
+</config>

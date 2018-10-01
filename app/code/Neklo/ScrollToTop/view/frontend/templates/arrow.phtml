@@ -1,0 +1,23 @@
+<?php /* @var $block \Neklo\ScrollToTop\Block\Arrow */ ?>
+<?php if ($block->canShow()): ?>
+    <div id="neklo_scrolltotop_arrow" class="align-<?php echo $block->getPosition(); ?>"
+         style="color:<?php echo $block->getColor(); ?>;display:none;"></div>
+
+    <script type="text/javascript">
+
+        require([
+            "jquery",
+            "nekloscrolltotop",
+        ], function (jQuery, NekloScrollToTop) {
+
+            new NekloScrollToTop({
+                'arrowId': 'neklo_scrolltotop_arrow',
+                'threshold': 0.3,
+                'scrollOptions': {
+                    'duration': '0.5'
+                }
+            });
+
+        });
+    </script>
+<?php endif; ?>

@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Sistel
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the sistel.com license
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ *
+ * @category    Paymen Methods - Redsys
+ * @package     Sistel_Redsys
+ * @author      Juan Pedro Barba Soler || Developer at Sistel, Servicios Informáticos de Software y Telecomunicaciones
+ * @copyright   Copyright (c) 2016 Sistel (http://www.sistel.es/)
+ * @license     See root folder of this extension
+**/
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <payment>
+            <redsys>
+                <!-- Module Default Values -->
+                <basic_settings>
+                    <enviroment>0</enviroment>
+                    <terminal>1</terminal>
+                    <currency>978</currency>
+                    <transaction_type>0</transaction_type>
+                    <payment_type>0</payment_type>
+                    <languages>1</languages>
+                    <ssl>0</ssl>
+                </basic_settings>
+
+                <order_settings>
+                    <new_order_notify>1</new_order_notify>
+                    <success_payment_stock_update>0</success_payment_stock_update>
+                    <pay_error>1</pay_error>
+                    <notify_error>0</notify_error>
+                    <send_email>0</send_email>
+                </order_settings>
+
+                <advanced_settings>
+                    <failure_checkout_redirect>1</failure_checkout_redirect>
+                    <custom_redirect>0</custom_redirect>
+                    <active_log>1</active_log>
+                </advanced_settings>
+
+                <!-- Basic Payment Config -->
+                <title>Redsys TPV</title>
+                <instructions>You will be redirect to Redsys TPV for payment.</instructions>
+                <active>1</active>
+                <model>Sistel\Redsys\Model\Redsys</model>
+                <payment_status>pendig_payment</payment_status>
+                <order_status>pendig</order_status>
+                <allowspecific>0</allowspecific>
+                <order_place_redirect_url>redsys/index/redirect</order_place_redirect_url>
+                <sort_order>1</sort_order>
+                <payment_action>authorize</payment_action>
+                <!--<group>redsys</group> -->
+            </redsys>
+        </payment>
+    </default>
+</config>

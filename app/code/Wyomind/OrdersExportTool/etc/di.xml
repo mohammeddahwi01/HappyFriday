@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
+    <!-- generation process -->
+    <type name="Wyomind\OrdersExportTool\Logger\Handler">
+        <arguments>
+            <argument name="filesystem" xsi:type="object">Magento\Framework\Filesystem\Driver\File</argument>
+        </arguments>
+    </type>
+    <type name="Wyomind\OrdersExportTool\Logger\Logger">
+        <arguments>
+            <argument name="name" xsi:type="string">OET</argument>
+            <argument name="handlers"  xsi:type="array">
+                <item name="notice" xsi:type="object">Wyomind\OrdersExportTool\Logger\Handler</item>
+            </argument>
+        </arguments>
+    </type>
+    
+    <!-- cron process -->
+    <type name="Wyomind\OrdersExportTool\Logger\HandlerCron">
+        <arguments>
+            <argument name="filesystem" xsi:type="object">Magento\Framework\Filesystem\Driver\File</argument>
+        </arguments>
+    </type>
+    
+    <type name="Wyomind\OrdersExportTool\Logger\LoggerCron">
+        <arguments>
+            <argument name="name" xsi:type="string">OET-CRON</argument>
+            <argument name="handlers"  xsi:type="array">
+                <item name="ordersexporttoolcron" xsi:type="object">Wyomind\OrdersExportTool\Logger\HandlerCron</item>
+            </argument>
+        </arguments>
+    </type>
+    
+    <!-- COMMAND LINE -->
+    <type name="Magento\Framework\Console\CommandList">
+        <arguments>
+            <argument name="commands" xsi:type="array">
+                <item name="oet_generate" xsi:type="object">Wyomind\OrdersExportTool\Console\Command\Export</item>
+                <item name="oet_list" xsi:type="object">Wyomind\OrdersExportTool\Console\Command\Listing</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

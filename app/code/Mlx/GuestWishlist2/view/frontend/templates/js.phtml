@@ -1,0 +1,47 @@
+<div class="wishlist-notify"></div>
+<?php
+$object     = \Magento\Framework\App\ObjectManager::getInstance();
+$formkey    = $object->get('Magento\Framework\Data\Form\FormKey');
+
+/* @var $config \Mlx\GuestWishlist2\Helper\Config  */
+$config		= $object->get('Mlx\GuestWishlist2\Helper\Config');
+
+$options = [
+
+	'showMsg'		=> $config->showMsg(),
+	'useAjax'		=> $config->useAjax(),
+	'class_has_item'=> $config->getClassHassItem(),
+	'keepItem'		=> $config->isKeepItem(),
+	'elements'		=> [
+			'add'			=> $config->getSelector('add'),
+			'remove'		=> $config->getSelector('remove'), 
+			'update'		=> $config->getSelector('update'), 
+			'cart'			=> $config->getSelector('cart')
+	],
+	'translate'		=> [
+			'add'		=> $config->getTranslaste('add'), 
+			'remove'	=> $config->getTranslaste('remove'),
+			'error'		=> $config->getTranslaste('error'),
+			'confirm'	=> $config->getTranslaste('confirm')			
+	],        			
+	'area'			=> [
+			'wishlist'		=> "#wishlist-view-form",
+			
+	],
+	'url'			=> [
+			'remove'		=> $this->getUrl('wishlist/index/add', array('product'=>'{product_id}', 'form_key'=>$formkey->getFormKey() )),
+			'add'			=> $this->getUrl('wishlist/index/remove', array('item'=>'{item_id}', 'form_key'=>$formkey->getFormKey() ))
+	],	
+	'selector_add'	=> 'a[href*="wishlist/index/add/product/{product_id}/"]'
+];
+
+?>
+
+<script type="text/x-magento-init">{
+	
+	"*": {
+    	"Mlx_GuestWishlist2/js/js": <?php echo json_encode($options); ?>
+    }
+    
+}
+</script>

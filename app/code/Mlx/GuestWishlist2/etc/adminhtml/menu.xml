@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+
+    <menu>        
+    	        
+        <!-- start module -->
+        <add id="Mlx_GuestWishlist2::guestwishlist" title="Guest Wishlist" module="Mlx_GuestWishlist2" sortOrder="10" parent="Mlx_Core::main" dependsOnModule="Mlx_Core" resource="Mlx_GuestWishlist2::guestwishlist"/>        
+        <add id="Mlx_GuestWishlist2::guestwishlist_configuration" title="Configuration" module="Mlx_GuestWishlist2" sortOrder="9999" parent="Mlx_GuestWishlist2::guestwishlist" action="adminhtml/system_config/edit/section/guestwishlist" resource="Mlx_GuestWishlist2::guestwishlist_configuration"/>
+        <!-- start module -->
+        
+        
+    </menu>
+    
+</config>

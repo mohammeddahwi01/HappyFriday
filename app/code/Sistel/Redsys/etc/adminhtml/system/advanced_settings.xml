@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Sistel
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the sistel.com license
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ *
+ * @category    Paymen Methods - Redsys
+ * @package     Sistel_Redsys
+ * @author      Juan Pedro Barba Soler || Developer at Sistel, Servicios Informáticos de Software y Telecomunicaciones
+ * @copyright   Copyright (c) 2016 Sistel (http://www.sistel.es/)
+ * @license     See root folder of this extension
+**/
+-->
+<include xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_include.xsd">
+    <group id="advanced_settings" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+        <label><![CDATA[Advanced Redsys Settings]]></label>
+        <frontend_model>Magento\Config\Block\System\Config\Form\Fieldset</frontend_model>
+            <field id="failure_checkout_redirect" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Redirect to Cart Checkout on Fail Payment</label>
+                <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                <comment><![CDATA[This will override Custom KO URL if is YES.]]></comment>
+            </field>
+            <field id="custom_redirect" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+              <label>Enable Custom redirect OK and KO</label>
+              <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+            </field>
+            <field id="okurl" translate="label" type="text" sortOrder="21" showInDefault="1" showInWebsite="1" showInStore="1">
+              <label>Custom OK URL</label>
+            </field>
+            <field id="kourl" translate="label" type="text" sortOrder="22" showInDefault="1" showInWebsite="1" showInStore="1">
+              <label>Custom KO URL</label>
+            </field>
+            <field id="active_log" translate="label" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Active Log</label>
+                <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+            </field>
+    </group>
+</include>

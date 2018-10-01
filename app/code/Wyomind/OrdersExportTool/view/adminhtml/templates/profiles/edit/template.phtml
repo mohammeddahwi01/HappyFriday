@@ -1,0 +1,74 @@
+<script>
+
+    require(["jquery", "oet_template"], function ($, template) {
+        'use strict';
+
+        /* template editor */
+        template.CodeMirrorHeaderPattern = CodeMirror.fromTextArea(document.getElementById('header'), {
+            matchBrackets: true,
+            mode: "application/x-httpd-php",
+            indentUnit: 2,
+            indentWithTabs: false,
+            lineWrapping: true,
+            lineNumbers: true,
+            styleActiveLine: true
+        });
+
+
+        template.CodeMirrorBodyPattern = CodeMirror.fromTextArea(document.getElementById('body'), {
+            matchBrackets: true,
+            mode: "application/x-httpd-php",
+            indentUnit: 2,
+            indentWithTabs: false,
+            lineWrapping: true,
+            lineNumbers: true,
+            styleActiveLine: true
+        });
+
+        template.CodeMirrorFooterPattern = CodeMirror.fromTextArea(document.getElementById('footer'), {
+            matchBrackets: true,
+            mode: "application/x-httpd-php",
+            indentUnit: 2,
+            indentWithTabs: false,
+            lineWrapping: true,
+            lineNumbers: true,
+            styleActiveLine: true
+        });
+
+
+        // to be sure that the good value will be well stored in db
+        template.CodeMirrorBodyPattern.on('blur', function () {
+            $('#body').val(template.CodeMirrorBodyPattern.getValue());
+        });
+        template.CodeMirrorHeaderPattern.on('blur', function () {
+            $('#header').val(template.CodeMirrorHeaderPattern.getValue());
+        });
+        template.CodeMirrorFooterPattern.on('blur', function () {
+            $('#footer').val(template.CodeMirrorFooterPattern.getValue());
+        });
+
+        $('#type').on('change', function () {
+            template.updateType(true);
+        });
+        template.updateType(false);
+//
+        $(document).on('focus', ".body-txt-field   ", function () {
+            template.popup_open($(this).val(), this);
+        });
+
+        $(document).on('focus', ".header-txt-field", function () {
+            template.popup_open($(this).val(), this);
+        });
+
+        $(document).on('click', ".remove-field", function () {
+            template.removeField(this);
+        });
+
+        $('#profiles_edidt_tabs_template_section').on('click', function () {
+            template.CodeMirrorHeaderPattern.refresh();
+            template.CodeMirrorBodyPattern.refresh();
+            template.CodeMirrorFooterPattern.refresh();
+        });
+
+    });
+</script>

@@ -1,0 +1,22 @@
+{
+    "name": "wyomind/ordereraser",
+    "description": "Order Eraser allows you to simply clean your sales database by deleting useless orders, linked invoices and all linked data in one go. ",
+    "type": "magento2-module",
+    "version": "5.0.2",
+    "license": [
+        "Commercial License - Copyright 2016  - WYOMIND Sarl - Purchasing any product (Software) from the Wyomind.com web-site means buyer agree to the following statements (see LICENSE.TXT)"
+    ],
+    "require": {
+        "php": "~5.5.0|~5.6.0|~7.0.0",
+        "magento/framework": "100.*.*",
+        "wyomind/core": "^3.0.0"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Wyomind\\OrderEraser\\": ""
+        }
+    }
+}

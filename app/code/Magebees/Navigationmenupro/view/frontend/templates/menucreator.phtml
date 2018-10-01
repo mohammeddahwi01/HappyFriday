@@ -1,0 +1,52 @@
+<?php
+	$_config = $this->getConfig();
+	$_optimizeconfig = $this->getOptimizeConfig();
+	$enable_disable = $_config['module_enable_disable'];
+	$groupId = $this->getGroupId();
+	$menu_status = $this->getMenuStatus($groupId);
+	if(($enable_disable == "1") && ($menu_status == "1"))
+	{
+		
+		$menu_type = $this->getMenutype($groupId);
+		$responsive_breakpoint = $_config['responsive_break_point'];
+		if(isset($_config['responsive_break_point'])){
+			$responsive_breakpoint = $_config['responsive_break_point'];
+		}else{
+			$responsive_breakpoint = '767px';
+		}
+		if($menu_type!="list-item"){
+		$filename = $menu_type."-".$groupId;
+		?>
+		<link rel="stylesheet" type="text/css" href="<?php echo $this->getViewFileUrl('Magebees_Navigationmenupro::css/navigationmenupro/'.$filename.'.css');?>" />
+	<?php
+		}	
+		$groupId = $this->getGroupId();
+		$om = \Magento\Framework\App\ObjectManager::getInstance();
+		$menu_customer= $om->create('Magebees\Navigationmenupro\Model\Customer');
+		$permission = $menu_customer->getUserPermission();
+		$developer_mode_enable_disable = $_optimizeconfig['developer_mode_enable_disable'];
+		if($developer_mode_enable_disable == "1") 
+		{
+			echo $menu_html = $this->get_menu_items($groupId);
+		}
+		else
+		{
+			$helper= $om->create('Magebees\Navigationmenupro\Helper\Data');
+			echo $menu_html = $helper->getStaticMenu($groupId);
+		}
+		
+		?>
+<script>
+	requirejs(['jquery','domReady!','cwsmenu'], function(jQuery){
+		var gid = '#cwsMenu-<?php echo $groupId;?>';
+		jQuery('#cwsMenu-<?php echo $groupId;?>').cwsmenu({
+				group_id : '#cwsMenu-<?php echo $groupId;?>',
+				menu_type:'<?php echo $menu_type; ?>',
+				responsive_breakpoint:'<?php echo $responsive_breakpoint;?>',
+		});
+});	
+</script>
+<?php
+	}
+	
+?>

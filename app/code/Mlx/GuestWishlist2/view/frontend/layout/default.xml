@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Mlx_GuestWishlist2::css/style.css"/>
+       
+    </head>
+    <body>
+      
+        
+        <referenceBlock name="header.links">            
+            <block class="Mlx\GuestWishlist2\Block\Link" name="wishlist-link" template="link.phtml"/>
+        </referenceBlock>
+        
+        
+        <referenceContainer name="before.body.end">
+            <block class="Magento\Framework\View\Element\Template" name="mlx_guestwishlist2_js" template="Mlx_GuestWishlist2::js.phtml"/>
+        </referenceContainer>
+      
+        <referenceBlock name="wishlist_sidebar">
+            <action method="setTemplate">
+                <argument name="template"  xsi:type="string">Mlx_GuestWishlist2::wishlist/sidebar.phtml</argument>
+            </action>
+        </referenceBlock>             
+    </body>
+</page>

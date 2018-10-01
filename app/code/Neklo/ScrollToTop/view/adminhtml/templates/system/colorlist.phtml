@@ -1,0 +1,30 @@
+<?php /* @var $block \Neklo\ScrollToTop\Block\Adminhtml\System\ColorList */ ?>
+
+<div id="neklo_scrolltotop">
+    <?php foreach ($block->getColorList() as $color): ?>
+        <div class="neklo_scrolltotop color" data-color="<?php echo $color; ?>"
+             style="background-color: #<?php echo $color; ?>;"></div>
+    <?php endforeach; ?>
+</div>
+
+<div id="neklo_scrolltotop_arrow" class="arrow" style="color: <?php echo $block->getColor(); ?>;display:none;"></div>
+
+<script type="text/javascript">
+
+    require([
+        "jquery",
+        "nekloscrolltotop"
+    ], function (jQuery, NekloScrollToTop) {
+
+        new NekloScrollToTop(
+            {
+                'colorInputId': '<?php echo $block->getColorInputId(); ?>',
+                'colorListSelector': '.neklo_scrolltotop.color',
+                'previewContainerId': 'neklo_scrolltotop_arrow',
+                'hintContainerSelector': '#row_neklo_scrolltotop_frontend_color_list td',
+                'colorAttributeName': 'data-color'
+            }
+        );
+
+    });
+</script>

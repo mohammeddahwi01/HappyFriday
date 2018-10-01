@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <guestwishlist>
+            <general>
+                <active>1</active>
+                <ajax>1</ajax>
+                <showmsg>0</showmsg>
+                <class_has_item>wishlist-added</class_has_item>
+                <addlink>1</addlink>
+            </general>      
+            <translate>
+                <add>Add To Wishlist</add>
+                <remove>Remove From Wishlist</remove>
+                <error>Sorry, We can't process your request. Please try again in next time.</error>
+                <confirm>Are you sure you would like to remove this item from the wishlist?</confirm>                
+            </translate>  
+            <selector>
+                <add>.towishlist</add>
+                <remove>.product-item-actions .btn-remove</remove>
+                <update>#wishlist-view-form .update</update>
+                <cart>#wishlist-view-form .products-grid .tocart</cart>                
+            </selector>    
+            <cart>
+                <display>1</display>
+                <keep>0</keep>
+                <keep_product>1</keep_product>
+            </cart>
+        </guestwishlist>
+    </default>
+</config>

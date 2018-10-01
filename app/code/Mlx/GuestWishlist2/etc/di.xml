@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    
+    <!-- model -->
+    <preference for="\Magento\Wishlist\Model\Wishlist" type="\Mlx\GuestWishlist2\Model\Rewrite\Wishlist\Wishlist" />
+    <preference for="\Magento\Wishlist\Model\AuthenticationState" type="\Mlx\GuestWishlist2\Model\Rewrite\Wishlist\AuthenticationState" />    
+    
+    <!-- block -->
+    <preference for="\Magento\Wishlist\Block\Customer\Wishlist" type="\Mlx\GuestWishlist2\Block\Rewrite\Wishlist\Customer\Wishlist" />
+    <preference for="\Magento\Wishlist\Block\Share\Wishlist" type="\Mlx\GuestWishlist2\Block\Rewrite\Wishlist\Share\Wishlist" />
+    
+    <!-- helper -->
+       
+    
+    <type name="Magento\Wishlist\Helper\Data">
+        <plugin name="guestwishlist" type="Mlx\GuestWishlist2\Plugin\Helper\Wishlist\Data" sortOrder="1"/>
+    </type>
+    
+    
+    <!-- controller -->
+    <preference for="\Magento\Wishlist\Controller\WishlistProvider" type="\Mlx\GuestWishlist2\Controller\Rewrite\Wishlist\WishlistProvider" />
+    <preference for="\Magento\Wishlist\Controller\Index\Add" type="\Mlx\GuestWishlist2\Controller\Rewrite\Wishlist\Index\Add" />
+    <preference for="\Magento\Wishlist\Controller\Index\Remove" type="\Mlx\GuestWishlist2\Controller\Rewrite\Wishlist\Index\Remove" />
+    <preference for="\Magento\Wishlist\Controller\Index\Cart" type="\Mlx\GuestWishlist2\Controller\Rewrite\Wishlist\Index\Cart" />
+    <preference for="\Magento\Wishlist\Controller\Index\Update" type="\Mlx\GuestWishlist2\Controller\Rewrite\Wishlist\Index\Update" />
+    <preference for="\Magento\Wishlist\Controller\Index\Share" type="\Mlx\GuestWishlist2\Controller\Rewrite\Wishlist\Index\Share" />
+    <preference for="\Magento\Wishlist\Controller\Index\Send" type="\Mlx\GuestWishlist2\Controller\Rewrite\Wishlist\Index\Send" />
+    <preference for="\Magento\Wishlist\Controller\Index\Fromcart" type="\Mlx\GuestWishlist2\Controller\Rewrite\Wishlist\Index\Fromcart" />
+    
+    <!-- other -->
+    <preference for="\Magento\Wishlist\CustomerData\Wishlist" type="\Mlx\GuestWishlist2\CustomerData\Rewrite\Wishlist" />
+    
+   
+  
+</config>

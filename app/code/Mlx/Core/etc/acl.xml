@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="Mlx_Core::main" title="MLX" sortOrder="0">
+                    <resource id="Mlx_Core::manager_license" title="Manage License Key" sortOrder="9999" />                       
+                    
+                </resource>
+            </resource>
+        </resources>
+    </acl>
+</config>

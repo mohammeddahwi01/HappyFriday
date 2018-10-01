@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Sistel
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the sistel.com license
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ *
+ * @category    Paymen Methods - Redsys
+ * @package     Sistel_Redsys
+ * @author      Juan Pedro Barba Soler || Developer at Sistel, Servicios Informáticos de Software y Telecomunicaciones
+ * @copyright   Copyright (c) 2016 Sistel (http://www.sistel.es/)
+ * @license     See root folder of this extension
+**/
+-->
+<include xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_include.xsd">
+    <group id="advanced_currency" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+        <label><![CDATA[Multi currency Settings]]></label>
+        <comment><![CDATA[<p>Here you can set the specific terminal for each currency option.</p>]]></comment>
+        <frontend_model>Magento\Config\Block\System\Config\Form\Fieldset</frontend_model>
+        <field id="eur" translate="label" type="text" sortOrder="21" showInDefault="1" showInWebsite="1" showInStore="1">
+          <label>Euro specific terminal</label>
+        </field>
+        <field id="eur_key" translate="label" type="text" sortOrder="21" showInDefault="1" showInWebsite="1" showInStore="1">
+          <label>Euro specific SHA256</label>
+        </field>
+        <field id="usd" translate="label" type="text" sortOrder="22" showInDefault="1" showInWebsite="1" showInStore="1">
+          <label>USD Dolar specific terminal</label>
+        </field>
+        <field id="usd_key" translate="label" type="text" sortOrder="22" showInDefault="1" showInWebsite="1" showInStore="1">
+          <label>USD Dolar specific SHA256</label>
+        </field>
+        <field id="gbp" translate="label" type="text" sortOrder="21" showInDefault="1" showInWebsite="1" showInStore="1">
+          <label>GBP Pound specific terminal</label>
+        </field>
+        <field id="gbp_key" translate="label" type="text" sortOrder="21" showInDefault="1" showInWebsite="1" showInStore="1">
+          <label>GBP Pound specific SHA256</label>
+        </field>
+        <field id="jpy" translate="label" type="text" sortOrder="22" showInDefault="1" showInWebsite="1" showInStore="1">
+          <label>Japan Yen specific terminal</label>
+        </field>
+        <field id="jpy_key" translate="label" type="text" sortOrder="22" showInDefault="1" showInWebsite="1" showInStore="1">
+          <label>Japan Yen specific SHA256</label>
+        </field>
+    </group>
+</include>

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+	    <css src="Mlx_Core::css/style.css"/>
+	</head>
+    <body>        
+        <referenceContainer name="content">
+            <block class="Mlx\Core\Block\Adminhtml\License" name="mlx.license" template="license.phtml" cacheable="false">                
+            </block>
+        </referenceContainer>
+    </body>
+</page>

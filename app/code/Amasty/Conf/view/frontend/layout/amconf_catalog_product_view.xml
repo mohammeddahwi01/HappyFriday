@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2018 Amasty (https://www.amasty.com)
+ * @package Amasty_Conf
+ */
+-->
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Amasty_Conf::css/amzoomer.css"/>
+        <css src="Amasty_Conf::js/fancybox/jquery.fancybox.css"/>
+        <css src="Amasty_Conf::js/slick/slick.css"/>
+        <css src="Amasty_Conf::js/slick/slick-theme.css"/>
+    </head>
+    <body>
+        <referenceContainer name="product.info.media">
+            <block class="Amasty\Conf\Block\Product\View\Gallery"
+                   name="product.info.media.image"
+                   template="Amasty_Conf::product/view/gallery.phtml"
+            />
+        </referenceContainer>
+    </body>
+</page>

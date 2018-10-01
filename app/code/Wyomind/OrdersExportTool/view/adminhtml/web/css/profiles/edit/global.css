@@ -1,0 +1,5 @@
+
+/* delete button */
+button#delete span {
+    color:red !important;
+}

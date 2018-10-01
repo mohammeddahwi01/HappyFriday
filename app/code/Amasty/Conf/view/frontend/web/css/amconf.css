@@ -1,0 +1,152 @@
+.amconf-share-input {
+    width: 75% !important;
+    margin-right: 1%;
+}
+
+.product-social-links .action.share:before {
+    background: url("../images/share.png") no-repeat;
+    content: "" !important;
+    display: block;
+    width: 18px;
+    height: 18px;
+}
+
+.product-social-links .action.share:hover:before {
+    background: url("../images/share.png") 0 -18px;
+}
+
+.amconf-share-container {
+    margin-top: 5px;
+    display: none;
+}
+
+.share.amasty_conf{
+    margin-left: 5%;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.swatch-attribute span.swatch-option-price {
+    padding-right: 10px;
+    text-align: left;
+}
+
+
+
+span.amconf-matrix-button {
+    background-color: #b11623;
+    color: white;
+    margin: 0px 2px;
+    padding: 2px 0px 1px 0px;
+    width: 15px;
+    height: 20px;
+    display: inline-block;
+    cursor: pointer;
+    font-weight: bolder;
+    box-sizing: content-box;
+}
+
+input.amconf-matrix-qty-unput {
+    height: 23px;
+}
+
+span.amconf-matrix-button.plus {
+    background-color: #64a556;
+}
+
+span.amconf-matrix-button.plus:hover {
+    background-color: #3e802f;
+}
+
+span.amconf-matrix-button:hover {
+    background-color: #820a14;
+}
+
+.amconf-matrix-title{
+    font-weight: bold;
+}
+
+.amconf-matrix-qty input.amconf-matrix-qty-unput {
+    max-width: 50px;
+    text-align: center;
+    padding: 0px;
+}
+
+tr.amconf-matrix-title {
+    background-color: rgb(231, 231, 231);
+}
+
+.amconf-matrix {
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    margin-top: 20px;
+    border-collapse: initial;
+    border-spacing: 0 4px;
+}
+
+.amconf-matrix-row-title .amconf-matrix-td {
+    padding: 10px;
+}
+
+.amconf-matrix .swatch-option {
+    margin: 0 auto;
+    float: none;
+    max-width: 40px;
+}
+
+tr.amconf-matrix-row{
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(240, 248, 255);
+}
+
+tr.amconf-matrix-row:hover{
+    background-color: #f6f6f6;
+}
+
+.amconf-matrix-out-of-stock {
+    color: red;
+    font-size: smaller;
+}
+
+td.amconf-matrix-td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.amprmatrix-active .qty-wrapper {
+    display: none;
+}
+
+.amconf-matrix-old-price {
+    text-decoration: line-through;
+}
+
+.amconf-matrix-td-price {
+    font-weight: 700;
+}
+
+.amconf-matrix td {
+    padding: 11px 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    .amconf-matrix-qty input.amconf-matrix-qty-unput {
+        max-width: 35px;
+    }
+
+    .amconf-matrix td {
+        padding: 11px 0px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .amconf-matrix-qty {
+        min-width: 124px;
+    }
+
+    td.amconf-matrix-td:first-child  {
+        min-width: 110px;
+    }
+}
+

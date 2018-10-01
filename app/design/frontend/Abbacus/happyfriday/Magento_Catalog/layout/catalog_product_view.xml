@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <move element="page.main.title" destination="product.info.main" before="-"/>
+        <move element="product.info.stock.sku" destination="product.info.price" after="product.price.final"/>
+        <move element="product.info.review" destination="product.info.main" before="product.info.price"/>
+		<move element="socialshare" destination="product.info.media" before="skip_gallery_after.target"/>
+		<referenceContainer name="product.info.main">
+			<block class="Magento\Catalog\Block\Product\View\Description" name="product.info.brand" template="Magento_Catalog::product/view/attribute.phtml" before="-">
+				<arguments>
+					<argument name="at_call" xsi:type="string">getBrand</argument>
+					<argument name="at_code" xsi:type="string">brand</argument>
+					<argument name="css_class" xsi:type="string">brand</argument>
+					<!--<argument name="at_label" xsi:type="string">default</argument>-->
+					<argument name="add_attribute" xsi:type="string">itemprop="brand"</argument>
+					<argument name="at_type" xsi:type="string">text</argument>
+				</arguments>
+			</block>
+		</referenceContainer>
+		<move element="product.info.stock.sku" destination="product.info.main" after="product.info.brand"/>
+		<move element="product.info.type" destination="product.info.main" after="product.info.stock.sku"/>
+		<referenceBlock name="view.addto.compare" remove="true"/>
+		<referenceBlock name="product.info.mailto" remove="true"/>
+		<referenceBlock name="product.info.overview" remove="true"/>
+		<referenceBlock name="product.attributes" remove="true"/>
+		<referenceBlock name="product.info.details">
+			<block class="Magento\Catalog\Block\Product\View\Description" name="product.info.composition" template="Magento_Catalog::product/view/attribute.phtml" group="detailed_info">
+				<arguments>
+					<argument name="at_call" xsi:type="string">getComposition</argument>
+					<argument name="at_code" xsi:type="string">composition</argument>
+					<argument name="css_class" xsi:type="string">composition</argument>
+					<argument name="at_label" xsi:type="string">none</argument>
+					<argument name="title" translate="true" xsi:type="string">Composition</argument>
+				</arguments>
+			</block>
+			<block class="Magento\Catalog\Block\Product\View\Description" name="product.info.product_care" template="Magento_Catalog::product/view/attribute.phtml" group="detailed_info">
+				<arguments>
+					<argument name="at_call" xsi:type="string">getProductCare</argument>
+					<argument name="at_code" xsi:type="string">product_care</argument>
+					<argument name="css_class" xsi:type="string">product_care</argument>
+					<argument name="at_label" xsi:type="string">none</argument>
+					<argument name="title" translate="true" xsi:type="string">Product Care</argument>
+				</arguments>
+			</block>
+			<block class="Magento\Catalog\Block\Product\View\Description" name="product.info.delivery" template="Magento_Catalog::product/view/attribute.phtml" group="detailed_info">
+				<arguments>
+					<argument name="at_call" xsi:type="string">getDelivery</argument>
+					<argument name="at_code" xsi:type="string">delivery</argument>
+					<argument name="css_class" xsi:type="string">delivery</argument>
+					<argument name="at_label" xsi:type="string">none</argument>
+					<argument name="title" translate="true" xsi:type="string">Feature</argument>
+				</arguments>
+			</block>
+		</referenceBlock>
+		<referenceContainer name="content">
+			<block class="Magento\Catalog\Block\Product\View\Description" name="product.info.sizing" template="Magento_Catalog::product/view/sizing.phtml" after="-">
+				<arguments>
+					<argument name="at_call" xsi:type="string">getSizing</argument>
+					<argument name="at_code" xsi:type="string">sizing</argument>
+					<argument name="css_class" xsi:type="string">sizing</argument>
+					<argument name="at_label" xsi:type="string">none</argument>
+					<argument name="title" translate="true" xsi:type="string">Size Guide</argument>
+				</arguments>
+			</block>
+		</referenceContainer>
+		<referenceContainer name="content">
+			<block class="Magento\Catalog\Block\Product\View\Description" name="product.info.previousnext" template="product/view/previousnext.phtml" />   
+		</referenceContainer>
+		<move element="product.info.previousnext" destination="product.info.media" before="socialshare"/>
+		<referenceContainer name="content.aside">
+		<block class="WeltPixel\OwlCarouselSlider\Block\Slider\Products" after="-" name="recently_viewed" cacheable="false" template="WeltPixel_OwlCarouselSlider::product/list/items.phtml">
+            <action method="setType">
+                <argument name="products_type" xsi:type="string">recently_viewed</argument>
+            </action>
+			<action method="setData">
+                <argument name="products_type" xsi:type="string">recently_viewed</argument>
+            </action>
+        </block>
+		</referenceContainer>
+    </body>
+</page>

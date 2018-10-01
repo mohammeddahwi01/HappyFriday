@@ -1,0 +1,16 @@
+{
+  "name": "neklo/scrolltotop",
+  "description": "Scroll to top arrow",
+  "type": "magento2-module",
+  "version": "2.0.0",
+  "require": {
+    "php": "~5.5.26",
+    "neklo/core": "~2.0.0"
+  },
+  "autoload": {
+    "files": [ "registration.php" ],
+    "psr-4": {
+      "Neklo\\ScrollToTop\\": ""
+    }
+  }
+}

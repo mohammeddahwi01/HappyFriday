@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Sistel
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the sistel.com license
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ *
+ * @category    Paymen Methods - Redsys
+ * @package     Sistel_Redsys
+ * @author      Juan Pedro Barba Soler || Developer at Sistel, Servicios Informáticos de Software y Telecomunicaciones
+ * @copyright   Copyright (c) 2016 Sistel (http://www.sistel.es/)
+ * @license     See root folder of this extension
+**/
+-->
+<include xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_include.xsd">
+    <group id="basic_settings" translate="label comment" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+        <label><![CDATA[Basic Redsys Settings]]></label>
+        <frontend_model>Magento\Config\Block\System\Config\Form\Fieldset</frontend_model>
+            <field id="enviroment" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Enviroment</label>
+                <source_model>Sistel\Redsys\Model\System\Config\Source\Enviroment</source_model>
+            </field>
+            <field id="commerce_name" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Commerce Name</label>
+            </field>
+            <field id="commerce_num" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Commerce Number(FUC)</label>
+            </field>
+            <field id="payment_type" translate="label" type="select" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Payments type Allowed</label>
+                <source_model>Sistel\Redsys\Model\System\Config\Source\PaymentMethods</source_model>
+            </field>
+            <field id="key256" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Secret Encrypted Key (SHA-256)</label>
+            </field>
+            <field id="terminal" translate="label" type="text" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Terminal Number</label>
+            </field>
+            <field id="currency" translate="label" type="select" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Currency</label>
+                <source_model>Sistel\Redsys\Model\System\Config\Source\Currency</source_model>
+            </field>
+            <!-- TODO
+            <field id="ssl" translate="label" type="select" sortOrder="90" showInDefault="1" showInWebsite="1" showInStore="0">
+                <label>Use SSL validation</label>
+                <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+            </field>
+            -->
+            <field id="transaction_type" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Transaction Type</label>
+            </field>
+            <field id="languages" translate="label" type="select" sortOrder="110" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Allow TPV Languages</label>
+                <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+            </field>            
+            <!--<field id="callback" translate="label" type="select" sortOrder="120" showInDefault="1" showInWebsite="1" showInStore="1">-->
+                <!--<label>Callback</label>-->
+                <!--<source_model>Sistel\Redsys\Model\System\Config\Source\Callback</source_model>-->
+            <!--</field>-->
+    </group>
+</include>

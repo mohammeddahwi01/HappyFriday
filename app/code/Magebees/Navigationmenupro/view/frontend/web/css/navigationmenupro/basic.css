@@ -1,0 +1,127 @@
+/***************************************************************************
+ Extension Name	: Magento Navigation Menu Pro - Responsive Mega Menu / Accordion Menu / Smart Expand Menu
+ Extension URL	: http://www.magebees.com/magento-navigation-menu-pro-responsive-mega-menu-accordion-menu-smart-expand.html
+ Copyright		: Copyright (c) 2015 MageBees, http://www.magebees.com
+ Support Email	: support@magebees.com 
+ ***************************************************************************/ 
+/**** Deault reset class ***/
+.nav-sections-item-content > .cwsMenuOuter { display: block !important; }
+.cwsMenuOuter * { box-sizing:border-box; outline:none; 
+	-webkit-transition:all 0.3s ease-in-ou; -moz-transition:all 0.3s ease-in-out; -o-transition:all 0.3s ease-in-out; -ms-transition:all 0.3s ease-in-out; transition:all 0.3s ease-in-out; }
+nav { display:block; }
+.cwsMenu span.arw { display:none; }
+.cwsMenuOuter ul.cwsMenu, .cwsMenuOuter ul.cwsMenu li { list-style:none; margin:0; padding:0; }
+.cwsMenu li { position:relative; text-align:left; }
+.cwsMenu a, .cwsMenu a:hover { display:block; line-height:1.3em; text-decoration:none; position:relative; }
+
+.cwsMenu a > span.arw { color:#fff; font:bold 17px Arial; display:none; width:34px; height:100%; text-align:center; position:absolute; top:0; right:0; cursor:pointer; background-color:rgba(0,0,0,0.15); }
+.cwsMenu a > span.arw:after { display:inline-block; width:18px; height:18px; margin:-9px 0 0 -9px; position:absolute; top:50%; left:50%; cursor:pointer; }
+.cwsMenu a > span.plush:after { content:"+"; }
+.cwsMenu a > span.minus:after { content:"-"; font-size:20px; line-height:16px; }
+
+.cwsMenu span.img { display:inline-block; vertical-align:middle; margin-right:5px; }
+.cwsMenu span.img img { max-width:100%; max-height:100%; }
+.cwsMenu li > ul { padding:0; margin:0; transition:none; }
+
+/* Menu Outer */
+.navigation.cwsMenuOuter { position:static; }
+.cwsMenuOuter:after, .cwsMenu:after { content:' '; display:block; clear:both; width:0; height:0; overflow:hidden; }
+.cwsMenu { position:relative; }
+
+.cwsMenuOuter .menuTitle { font-size:18px; padding:10px; margin:0; }
+
+/* right to left align setting */
+.cwsMenuOuter.rtl, .rtl { direction:rtl; }
+.cwsMenuOuter.rtl .cwsMenu li { text-align:right; }
+.cwsMenuOuter.rtl .cwsMenu span.img { margin-left:5px; margin-right:0; }
+.cwsMenuOuter.rtl .smart-expand a > span.arw { left:0; right:inherit; }
+
+.cwsMenu.mega-menu li > ul.subMenu { position:absolute; z-index:999; }
+.cwsMenu.mega-menu li:hover > ul.subMenu {  }
+
+.cwsMenu.mega-menu li.Level1 li:first-child { border:0 none !important; }
+
+.cwsMenu .menulbl { display:inline-block; padding:2px; margin:0 0 0 4px; vertical-align:top; border-radius:3px; }
+
+
+/* Mega Menu Seting */
+.cwsMenu li.megamenu ul:after { content:"."; display:block; clear:both; height:0; width:0; overflow:hidden; }
+.cwsMenu li.megamenu.column-2>ul.subMenu { width:460px; }/* 2Column */
+.cwsMenu li.megamenu.column-3>ul.subMenu { width:700px; }/* 3Column */
+.cwsMenu li.megamenu.column-4>ul.subMenu { width:900px; }/* 4Column */
+.cwsMenu li.megamenu.column-5>ul.subMenu { width:960px; }/* 5Column */
+.cwsMenu li.megamenu.column-6>ul.subMenu,
+.cwsMenu li.megamenu.column-7>ul.subMenu,
+.cwsMenu li.megamenu.column-8>ul.subMenu { width:1000px; }/* 6,7,8 Column */
+
+.cwsMenu li.megamenu ul li.Level1 { float:left; width:100%; }
+
+/* Mega Menu Sub Column width Seting */
+.cwsMenu li.megamenu.column-2 li.Level1.column-1 { width:50%; }
+
+.cwsMenu li.megamenu.column-3 li.Level1.column-1 { width:33.33%; }
+.cwsMenu li.megamenu.column-3 li.Level1.column-2 { width:60.66%; }
+
+.cwsMenu li.megamenu.column-4 li.Level1.column-1 { width:25%; }
+.cwsMenu li.megamenu.column-4 li.Level1.column-2 { width:50%; }
+.cwsMenu li.megamenu.column-4 li.Level1.column-3 { width:75%; }
+
+.cwsMenu li.megamenu.column-5 li.Level1.column-1 { width:20%; }
+.cwsMenu li.megamenu.column-5 li.Level1.column-2 { width:40%; }
+.cwsMenu li.megamenu.column-5 li.Level1.column-3 { width:60%; }
+.cwsMenu li.megamenu.column-5 li.Level1.column-4 { width:80%; }
+
+.cwsMenu li.megamenu.column-6 li.Level1.column-1 { width:16.66%; }
+.cwsMenu li.megamenu.column-6 li.Level1.column-2 { width:33.33%; }
+.cwsMenu li.megamenu.column-6 li.Level1.column-3 { width:49.98%; }
+.cwsMenu li.megamenu.column-6 li.Level1.column-4 { width:66.64%; }
+.cwsMenu li.megamenu.column-6 li.Level1.column-5 { width:83.3%; }
+
+.cwsMenu li.megamenu.column-7 li.Level1.column-1 { width:14.28%; }
+.cwsMenu li.megamenu.column-7 li.Level1.column-2 { width:28.56%; }
+.cwsMenu li.megamenu.column-7 li.Level1.column-3 { width:42.84%; }
+.cwsMenu li.megamenu.column-7 li.Level1.column-4 { width:57.12%; }
+.cwsMenu li.megamenu.column-7 li.Level1.column-5 { width:71.4%; }
+.cwsMenu li.megamenu.column-7 li.Level1.column-6 { width:85.68%; }
+
+.cwsMenu li.megamenu.column-8 li.Level1.column-1 { width:12.5%; }
+.cwsMenu li.megamenu.column-8 li.Level1.column-2 { width:25%; }
+.cwsMenu li.megamenu.column-8 li.Level1.column-3 { width:37.5%; }
+.cwsMenu li.megamenu.column-8 li.Level1.column-4 { width:50%; }
+.cwsMenu li.megamenu.column-8 li.Level1.column-5 { width:62.5%; }
+.cwsMenu li.megamenu.column-8 li.Level1.column-6 { width:75%; }
+.cwsMenu li.megamenu.column-8 li.Level1.column-7 { width:87.5%; }
+
+/* Horizontal Mega Menu Full Width*/
+.cwsMenu.horizontal>li.megamenu.full-width { position:static; }
+.cwsMenu.horizontal>li.megamenu.full-width>ul.subMenu{ width:100%; }
+
+/***** hide column Title ****/
+.cwsMenu li.megamenu ul li.hideTitle li.Level1 { float:none !important; width:auto !important; }
+.cwsMenu li.megamenu ul li.hideTitle>a.Level1 { display:none; }
+
+
+
+.cwsMenu.smart-expand > li ul { opacity:1; visibility:visible; transition:none; -webkit-transition:none; -moz-transition:none; }
+
+.cwsMenu.horizontal li.column-1 ul li > ul { display:none; }
+
+
+/* iPad in portrait & landscape */
+@media only screen  and (min-device-width : 768px) and (max-device-width : 1024px)  { 
+	.cwsMenu li.parent>a>span.arw { margin-left:14px !important; }
+}
+/* iPad in landscape */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) { 
+	.cwsMenu li.parent>a>span.arw { margin-left:14px !important; }
+}
+/*iPad in portrait*/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) { 
+	.cwsMenu li.parent>a>span.arw { margin-left:14px !important; }
+}
+
+@media only screen and (min-width:320px) and (max-width:999px) {
+	.cwsMenu > li > a.Level0, .cwsMenu > li > a > span.arw, .cwsMenu > li:not(.megamenu) ul, .cwsMenu > li.megamenu > ul, .cwsMenu.mega-menu li > ul { transition:none; -webkit-transition:none; -moz-transition:none; }
+}
+.cwsMenu.mega-menu ul.Level0.subMenu { display:none; }
+
