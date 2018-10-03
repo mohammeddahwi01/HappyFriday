@@ -65,7 +65,7 @@
 		<move element="store.menu" destination="header-wrapper" after="logo"/>
 		<move element="top.search" destination="header.panel.top" before="-" />
 		<move element="minicart" destination="header.panel.bottom" after="store_language" />
-		<move element="store_language" destination="header.panel.bottom" before="-" />
+		<move element="store_language" destination="top_flicker_menu" after="-" />
 		<move element="wishlist-link" destination="header.panel.bottom.wishlist" after="minicart" />
 		<referenceBlock name="faq-header-link" remove="true"/>
 		<referenceBlock name="footer_links" remove="true"/>
