@@ -77,9 +77,9 @@
 		<referenceBlock name="wishlist_sidebar" remove="true" />
 		<referenceBlock name="wishlist-link" remove="true" />
 		<referenceBlock name="checkout.cart.crosssell" remove="true"/>
-        <referenceBlock name="reviews.tab" remove="true" />
+        <!-- <referenceBlock name="reviews.tab" remove="true" />
         <referenceBlock name="product.review.form" remove="true" />
-        <referenceBlock name="product.info.review" remove="true" />
+        <referenceBlock name="product.info.review" remove="true" /> -->
 		<move element="wish-list-link" destination="header.panel.bottom.wishlist" after="minicart" />	
 	</body>
 </page>

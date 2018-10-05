@@ -7,9 +7,9 @@
 -->
 <page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
-        <move element="page.main.title" destination="product.info.main" before="-"/>
-        <move element="product.info.stock.sku" destination="product.info.price" after="product.price.final"/>
-        <move element="product.info.review" destination="product.info.main" before="product.info.price"/>
+        <move element="page.main.title" destination="product.info.main" before="-" />
+        <!-- <move element="product.info.stock.sku" destination="product.info.price" after="product.price.final"/> -->
+        <!-- <move element="product.info.review" destination="product.info.main" before="product.info.price"/> -->
 		<move element="socialshare" destination="product.info.media" before="skip_gallery_after.target"/>
 		<referenceContainer name="product.info.main">
 			<block class="Magento\Catalog\Block\Product\View\Description" name="product.info.brand" template="Magento_Catalog::product/view/attribute.phtml" before="-">
@@ -83,5 +83,11 @@
             </action>
         </block>
 		</referenceContainer>
+
+
+		<move element="product.info.details" destination="product.info.main" after="-" />
+		<move element="page.main.title" destination="product.info.main" after="product.info.brand" />
+		<move element="product.info.stock.sku" destination="product.info.main" after="page.main.title" />
+		<move element="product.info.review" destination="product.info.main" after="product.info.price" />
     </body>
 </page>

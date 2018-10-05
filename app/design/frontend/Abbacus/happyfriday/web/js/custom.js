@@ -1,5 +1,6 @@
 require(['jquery'],function($){
 	jQuery(document).ready(function(){
+		jQuery('.product.info.detailed .product.data.items .data.item.title:first-child').click();
 		jQuery(window).on('scroll', stickyheader);
 		function stickyheader() {
 			if(jQuery(window).scrollTop() > 50) {
@@ -35,7 +36,22 @@ require(['jquery'],function($){
 		}
 		jQuery('.panel.wrapper .block-search .label').on('click',function(){
 			jQuery(this).next('.control').slideToggle();
-		})
-
+		});
 	});
-});			
+
+	jQuery(window).load(function(){
+		
+		
+		//product view page javascript
+		var index = 0;
+		setInterval(function(){
+			jQuery('#amasty-gallery-images .amasty-gallery-thumb-link').eq(index).click();
+			index++;
+			if (index == jQuery('#amasty-gallery-images .amasty-gallery-thumb-link').length) {
+				index = 0;
+			}
+		},5000);
+	})
+
+
+});
