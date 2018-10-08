@@ -89,12 +89,12 @@
                 <frame>false</frame>
             </image>
             <image id="product_page_image_medium" type="image">
-                <width>400</width>
-                <height>200</height>
+                <width>600</width>
+                <height>600</height>
             </image>
             <image id="product_page_image_medium_no_frame" type="image">
-                <width>1450</width>
-                <height>1450</height>
+                <width>1000</width>
+                <height>1000</height>
                 <frame>false</frame>
             </image>
             <image id="product_page_image_small" type="thumbnail">
