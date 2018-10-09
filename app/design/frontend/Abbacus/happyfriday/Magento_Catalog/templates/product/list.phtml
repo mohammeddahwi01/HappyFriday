@@ -144,8 +144,12 @@ $gridvar = (int) $this->getRequest()->getParam($param);
 							</a>	
                         </strong>
 						
-						<?= $block->getReviewsSummaryHtml($_product, $templateType) ?>
+                        <a href="<?php echo $_product->getProductUrl() ?>">
+                        <?= $block->getReviewsSummaryHtml($_product, $templateType) ?>
+                        </a>
+                        <a href="<?php echo $_product->getProductUrl() ?>">
                         <?= /* @escapeNotVerified */ $block->getProductPrice($_product) ?>
+                        </a>
                         <?= $block->getProductDetailsHtml($_product) ?>
 
                         <div class="product-item-inner">

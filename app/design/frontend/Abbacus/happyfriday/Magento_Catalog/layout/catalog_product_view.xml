@@ -76,14 +76,22 @@
 		</referenceContainer>
 		<move element="product.info.previousnext" destination="product.info.media" before="socialshare"/>
 		<referenceContainer name="content.aside">
-		<block class="WeltPixel\OwlCarouselSlider\Block\Slider\Products" after="-" name="recently_viewed" cacheable="false" template="WeltPixel_OwlCarouselSlider::product/list/items.phtml">
-            <action method="setType">
-                <argument name="products_type" xsi:type="string">recently_viewed</argument>
-            </action>
-			<action method="setData">
-                <argument name="products_type" xsi:type="string">recently_viewed</argument>
-            </action>
-        </block>
+			<block class="WeltPixel\OwlCarouselSlider\Block\Slider\Products" before="-" name="recently_viewed" cacheable="false" template="WeltPixel_OwlCarouselSlider::product/list/items.phtml">
+	            <action method="setType">
+	                <argument name="products_type" xsi:type="string">recently_viewed</argument>
+	            </action>
+				<action method="setData">
+	                <argument name="products_type" xsi:type="string">recently_viewed</argument>
+	            </action>
+	        </block>
+	        <container name="custom.review.wrapper" htmlTag="div" htmlClass="custom-review-wrapper">
+		        <container name="custom.review.container" htmlTag="div" htmlClass="custom-review-container">
+			        <block class="Magento\Review\Block\Product\View\ListView" name="custom.review.list" template="Magento_Review::product/view/list.phtml"/>
+			        <block class="Magento\Review\Block\Product\Review" name="custom.reviews.tab" template="Magento_Review::review.phtml">
+		                <block class="Magento\Review\Block\Form" name="custom.product.review.form"/>
+		            </block>
+		        </container>
+			</container>
 		</referenceContainer>
 
 		<move element="product.info.brand" destination="product.info.custom.left"  before="-" />
@@ -94,6 +102,7 @@
 		<move element="product.info.review" destination="product.info.custom.right" before="-" />
 		<move element="product.info.addto" destination="product.info.custom.right" after="product.info.review" />
 		<move element="product.info.details" destination="product.info.main" after="-" />
-		
+		<move element="custom.review.wrapper" destination="page.wrapper" after="main.content" />
+		<referenceBlock name="reviews.tab" remove="true"/>
     </body>
 </page>
