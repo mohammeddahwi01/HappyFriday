@@ -91,6 +91,7 @@
 		        </container>
 			</container>
 		</referenceContainer>
+		        	
 
 		<move element="product.info.brand" destination="product.info.custom.left"  before="-" />
 		

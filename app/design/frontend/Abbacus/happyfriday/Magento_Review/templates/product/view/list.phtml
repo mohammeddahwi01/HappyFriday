@@ -30,8 +30,8 @@ $reviewRenderer = $objectManager->create('Magento\Review\Block\Product\ReviewRen
 $ratingSummary = $reviewRenderer->getReviewsSummaryHtml($product);
 
 ?>
-<?php if (count($_items)):?>
-<div class="block review-list customizedreview" id="customer-reviews">
+
+<div class="customizedreview">
     <div class="block-title">
         <strong><?= $block->escapeHtml(__('Customer Reviews')) . ' (' . $totalReview . ')' ?></strong>
         <div class="average-rating h"><?php echo $ratingSummary ?></div>
@@ -42,6 +42,11 @@ $ratingSummary = $reviewRenderer->getReviewsSummaryHtml($product);
             <?php echo $this->getLayout()->createBlock('Magento\Review\Block\Form')->setTemplate('Magento_Review::form.phtml')->toHtml() ?>
         </div>
     </div>
+</div>
+
+<?php if (count($_items)):?>
+<div class="block review-list customizedreview" id="customer-reviews">
+ 
     <div class="block-content">
         <div class="toolbar review-toolbar">
             <?= $block->getChildHtml('toolbar') ?>
