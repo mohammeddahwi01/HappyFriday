@@ -11,6 +11,10 @@
 			<referenceBlock name="catalog.compare.sidebar" remove="true" />
 			<referenceContainer name="sidebar.additional" remove="true" />
 		</referenceContainer>
+		<referenceContainer name="footer">
+			<block class="Magento\Catalog\Block\Category\View" name="category.meta.info" template="Magento_Catalog::product/showmetadata.phtml"/>
+		</referenceContainer>
+		<move element="category.meta.info" destination="footer" before="-" />
 		<move element="page.main.title" destination="content" as="page.main.title" before="-" />
 		<move element="category.image" destination="content" after="page.main.title" />
 		<move element="category.description" destination="content" after="category.image" />

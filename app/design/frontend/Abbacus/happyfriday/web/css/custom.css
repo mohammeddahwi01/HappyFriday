@@ -536,6 +536,25 @@
 	line-height: 1.2;
 }
 
+
+/*category page seo text */
+
+.catalog-category-view .product-metatitle {
+	text-align:center;
+	font-size:22px;
+	margin-bottom:20px;
+	padding:0 15px;
+	font-family:'roboto_condensedlight', 'sans-serif';
+	font-weight:700;
+}
+.catalog-category-view .product-metadescription {
+	text-align:center;
+	padding:0 15px 70px;
+	font-family:'roboto_condensedlight', 'sans-serif';
+	font-size:16px;
+}
+
+
 /* checkout page */
 
 
