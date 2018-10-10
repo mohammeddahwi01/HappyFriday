@@ -36,6 +36,12 @@ $ratingSummary = $reviewRenderer->getReviewsSummaryHtml($product);
         <strong><?= $block->escapeHtml(__('Customer Reviews')) . ' (' . $totalReview . ')' ?></strong>
         <div class="average-rating h"><?php echo $ratingSummary ?></div>
     </div>
+    <div class="review-form-wrapper">
+        <div class="add-review"><button type="button" class="review-form-toggle">Add Review</button></div>
+        <div class="review-form">
+            <?php echo $this->getLayout()->createBlock('Magento\Review\Block\Form')->setTemplate('Magento_Review::form.phtml')->toHtml() ?>
+        </div>
+    </div>
     <div class="block-content">
         <div class="toolbar review-toolbar">
             <?= $block->getChildHtml('toolbar') ?>
