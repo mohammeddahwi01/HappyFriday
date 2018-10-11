@@ -862,6 +862,40 @@
     font-family: 'roboto_condensedlight', 'sans-serif';
 }
 
+/* make purchase button */
+
+
+#confirmBox .button.am-btn-right {
+	 display: none;
+}
+
+#confirmButtons .checkout {
+    border-radius: 3px;
+    box-shadow: none;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: normal;
+    height: 50px;
+    line-height: 50px;
+    position: relative;
+    width: 45%;
+    background-color: #5e5e5e !important;
+    vertical-align: middle;
+    color: #fff;
+    padding: 0px;
+}
+
+#confirmButtons .checkout:hover {
+	background-color: #e2c200;
+}
+
+#confirmButtons .checkout:hover {
+	background-color: #e2c200 !important;
+	color: #fff !important;
+}
+
+
 
 
 @media screen and (min-width: 768px) {
