@@ -652,12 +652,11 @@
 	padding-left: 45px;
 }
 
+
 .checkout-index-index .opc-block-summary .minicart-items .product-image-container {
  	max-width: 75px;
     max-height: 75px;
 }
-
-
 
 /* minicart wrapper */
 
@@ -741,9 +740,11 @@
 	font-family: 'roboto_condensedlight','sans-serif';
 }
 
-
-
-
+.payment-method-message {
+    padding-left: 60px;
+    font-size: 16px;
+    color: #5e5e5e;
+}
 
 
 @media screen and (min-width: 768px) {
