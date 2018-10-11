@@ -747,6 +747,123 @@
 }
 
 
+
+/* 404 page design */
+
+.nowhere img {
+	transform: rotate(10deg);
+}
+
+.nowhere {
+	overflow: hidden;
+	margin-top: 30px;
+}
+
+
+.nowhere, .nowhere-message {
+	text-align: center;
+	padding: 0 15px;
+}
+
+.nowhere-message {
+	font-size:22px;
+	color:#5e5e5e;
+	font-weight:500;
+}
+
+.cms-no-route .block-new-products.grid .product-items {
+	text-align: center;
+}
+
+ .cms-no-route .block-new-products.grid .product-item-details {
+ 	position: relative;
+ }
+
+
+.cms-no-route .block-new-products.grid .towishlist {
+	display: block !important;
+    right: 5px;
+    top: 20px;
+    left: auto;
+    margin-right: 0;
+}
+
+.cms-no-route .block-new-products.grid .towishlist:before {
+    content: '';
+    background-image: url(../images/wishlist.png);
+    background-size: 20px auto;
+    background-position: center top;
+    background-repeat: no-repeat;
+    height: 20px;
+}
+
+.cms-no-route .block-new-products.grid .block-title {
+	text-align: center;
+	position: relative;
+}
+
+.cms-no-route .block-new-products.grid .block-title strong {
+	font-size:24px;
+	color:#5e5e5e;
+	font-weight:bold;
+}
+
+.cms-no-route .block-new-products.grid .product-item {
+	margin: 0 25px;
+}
+
+.cms-no-route .block-new-products.grid .block-content {
+	float: left;
+	width: 100%;
+	margin-top: 20px;
+	padding-bottom: 40px;
+}
+
+.cms-no-route .block-new-products.grid .block-title:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 40px;
+    background-image: url(../images/divider.png);
+    width: 100%;
+    top: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.cms-no-route .block-new-products.grid .action.tocompare, .cms-no-route .block-new-products.grid .actions-primary {
+	display: none;
+}
+
+
+.cms-no-route .block-new-products.grid .product-item-name {
+    font-size: 18px;
+    padding-right: 20px;
+    font-weight: bold;
+    color: #5e5e5e;
+    text-transform: lowercase;
+    text-align: left;
+    border-bottom: 1px solid #dedede;
+}
+
+
+.cms-no-route .block-new-products.grid .price-box {
+	margin-top: 5px;
+    clear: both;
+    float: left;
+    width: 100%;
+    text-align: left;
+}
+
+.cms-no-route .block-new-products.grid .price-container .price {
+	font-size: 22px;
+    color: #5e5e5e;
+    font-weight: bold !important;
+    font-family: 'roboto_condensedlight', 'sans-serif';
+}
+
+
+
 @media screen and (min-width: 768px) {
 	.page-header.sticky .panel.header.bottom .authorization-link {
 		margin-left: 25px;
