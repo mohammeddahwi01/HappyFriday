@@ -633,9 +633,11 @@
 	padding-left: 45px;
 }
 
-
-
-
+.payment-method-message {
+    padding-left: 60px;
+    font-size: 16px;
+    color: #5e5e5e;
+}
 
 
 @media screen and (min-width: 768px) {
