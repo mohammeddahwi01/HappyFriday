@@ -126,6 +126,79 @@
 	border-right: 1px solid #000;
 }
 
+/* login-registration page */
+
+.login-container {
+	max-width: 1200px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+.customer-account-login .block.block-customer-login, .customer-account-login .create.account.form-create-account {
+	float: left;
+	width: 50%;
+	padding: 0 40px;
+	min-width: initial;
+	clear: none;
+	margin-top: 40px;
+}
+
+.customer-account-login .block.block-customer-login {
+	border-right: 1px solid #dedede;
+}
+	
+
+
+.customer-account-login .block.block-customer-login .block-title strong, .customer-account-login .create.account.form-create-account .create.info legend span{
+	display: block;
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+    font-family: 'roboto_condensedlight','sans-serif';
+    line-height: 16px;
+}
+
+.customer-account-login .create.account.form-create-account .create.info {
+	margin-bottom: 0;
+}
+
+.customer-account-login .block.block-customer-login .field.note {
+	font-size: 16px;
+	text-align:center;
+}
+
+.customer-account-login .block.block-customer-login .control, .customer-account-login .create.account.form-create-account .control  {
+	width: 100%;
+}
+
+.customer-account-login .block.block-customer-login .control input:-webkit-autofill, 
+.customer-account-login .create.account.form-create-account input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px white inset;
+}
+
+.customer-account-login .block.block-customer-login .control input, .customer-account-login .create.account.form-create-account input {
+	background-color: #fff;
+	color: #5e5e5e;
+	border: 1px solid #5e5e5e;
+}
+
+.customer-account-login .block.block-customer-login .actions-toolbar .primary, .customer-account-login .create.account.form-create-account .actions-toolbar .primary {
+	width: 100%;
+}
+
+.customer-account-login .block.block-customer-login .action.login.primary, .customer-account-login .create.account.form-create-account .action.submit.primary {
+	font-family: 'roboto_condensedlight', 'sans-serif';
+	font-size: 16px;
+	background-color: #5e5e5e;
+	color: #fff;
+	border-radius: 0;
+	width: 100%;
+	border:none;
+}
+
+
+
+
 
 /* product view page */
 
@@ -618,6 +691,10 @@
 	float: none;
 	width: auto;
 	flex: 0 0 13%;
+}
+
+.catalog-topnav .filter-options .filter-options-item form[data-amshopby-filter='attr_price'] {
+	width:150px;
 }
 
 .catalog-topnav .filter-options .filter-options-content {
@@ -1541,6 +1618,17 @@
 		color: #5e5e5e;
 		width: auto;
 		font-size:14px;
+	}
+
+	.customer-account-login .block.block-customer-login, .customer-account-login .create.account.form-create-account {
+		width:100%;
+		padding:0px;
+		margin-top:0;
+	}
+
+	.customer-account-login .block.block-customer-login {
+		border-right:none;
+		margin-top:30px;
 	}
 
 	
