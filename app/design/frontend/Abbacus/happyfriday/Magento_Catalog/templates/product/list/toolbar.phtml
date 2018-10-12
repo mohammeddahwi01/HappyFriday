@@ -18,27 +18,41 @@ use Magento\Catalog\Model\Product\ProductList\Toolbar;
 <?php if ($block->getCollection()->getSize()): ?>
     <div class="toolbar toolbar-products" data-mage-init='<?= /* @escapeNotVerified */ $block->getWidgetOptionsJson() ?>'>
         
-		<div class="grid-view hidden-xs">
-				<strong class="view_perrow"><?php echo __('View') ?></strong>
-				<?php foreach ($this->getAvailableGrid() as  $_key=>$_limit): 
-					$this->isGridCurrent($_key);
-					?>
-                  <?php if(!$this->isGridCurrent($_key)): ?>
-                     <a href="<?php echo $this->getGridtUrl($_limit) ?>"> <?php echo $_limit; ?> </a>
-                  <?php else: ?>                 
-                  <a href="<?php echo $this->getGridtUrl($_limit) ?>" class="active"><?php echo $_limit; ?> </a>
-                  <?php endif;?>
-                  
-              <?php endforeach; ?>
-		</div>		
-		
-        <?php include ($block->getTemplateFile('Magento_Catalog::product/list/toolbar/amount.phtml')) ?>
+		 <div class="leftontoolbar">
+      <?php if ($block->isExpanded()): ?>
+          <?php include ($block->getTemplateFile('Magento_Catalog::product/list/toolbar/sorter.phtml')) ?>
+      <?php endif; ?>
+    </div>
 
-        <?= $block->getPagerHtml() ?>
 
-        
-        <?php if ($block->isExpanded()): ?>
-            <?php include ($block->getTemplateFile('Magento_Catalog::product/list/toolbar/sorter.phtml')) ?>
-        <?php endif; ?>
+    <div class="toolbarcenter">
+      <button type="button" class="toolbar-toggle">Filter</button>
+    </div>
+
+    <div class="rightontoolbar">
+      <div class="grid-view hidden-xs">
+          <strong class="view_perrow"><?php echo __('View') ?></strong>
+          <?php foreach ($this->getAvailableGrid() as  $_key=>$_limit): 
+            $this->isGridCurrent($_key);
+            ?>
+                    <?php if(!$this->isGridCurrent($_key)): ?>
+                       <a href="<?php echo $this->getGridtUrl($_limit) ?>"> <?php echo $_limit; ?> </a>
+                    <?php else: ?>                 
+                    <a href="<?php echo $this->getGridtUrl($_limit) ?>" class="active"><?php echo $_limit; ?> </a>
+                    <?php endif;?>
+                    
+                <?php endforeach; ?>
+      </div>    
+      <?php include ($block->getTemplateFile('Magento_Catalog::product/list/toolbar/amount.phtml')) ?>
+       <?= $block->getPagerHtml() ?>
+    </div>
+
+
+
+   
+   
+
+
+
     </div>
 <?php endif ?>

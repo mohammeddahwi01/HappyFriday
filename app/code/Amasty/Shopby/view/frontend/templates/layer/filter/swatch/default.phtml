@@ -100,6 +100,21 @@ $relNofollow = $filterSetting ? $filterSetting->getRelNofollow() : false;
                                 $value = $swatchData['swatches'][$option]['value'];
                                 break;
                         endswitch; ?>
+
+                        <?php if ($filterSetting && $filterSetting->isMultiselect()):
+                            $inputType = "checkbox";
+                        elseif ($filterSetting && !in_array($filterCode, ['rating', 'stock'])):
+                            $inputType = "radio";
+                        endif;?>
+                        <?php if (isset($inputType)) : ?>
+                            <input  class="input -hidden"
+                                    name="amshopby[<?= /* @escapeNotVerified */ $block->getFilter()->getRequestVar(); ?>][]"
+                                    value="<?= $option; ?>"
+                                    type="<?= $inputType; ?>"
+                                <?= $selected ? 'checked' : ''; ?>
+                            />
+                        <?php endif; ?>
+                        
                         <div class="<?= /* @escapeNotVerified */ $extraSwatchClass; ?> swatch-option
                                         <?= /* @escapeNotVerified */ $label['custom_style'] ?>
                                         <?= /* @escapeNotVerified */ $class; ?> "
@@ -112,6 +127,9 @@ $relNofollow = $filterSetting ? $filterSetting->getRelNofollow() : false;
                              style="<?= /* @escapeNotVerified */ $style ?>">
                             <?= /* @escapeNotVerified */ $value ?>
                         </div>
+                        <?php if ($optionType == 1) : ?>
+                            <span class="colorame"><?php echo $block->escapeHtml($label['label']); ?></span>
+                        <?php endif; ?>
                     <?php endif; ?>
                     <?php if ($showImagesLabel) : ?>
                         <div class="am-shopby-swatch-label">
@@ -126,19 +144,6 @@ $relNofollow = $filterSetting ? $filterSetting->getRelNofollow() : false;
                             </span>
                             <?php endif; ?>
                         </div>
-                    <?php endif; ?>
-                    <?php if ($filterSetting && $filterSetting->isMultiselect()):
-                        $inputType = "checkbox";
-                    elseif ($filterSetting && !in_array($filterCode, ['rating', 'stock'])):
-                        $inputType = "radio";
-                    endif;?>
-                    <?php if (isset($inputType)) : ?>
-                        <input  class="input -hidden"
-                                name="amshopby[<?= /* @escapeNotVerified */ $block->getFilter()->getRequestVar(); ?>][]"
-                                value="<?= $option; ?>"
-                                type="<?= $inputType; ?>"
-                            <?= $selected ? 'checked' : ''; ?>
-                        />
                     <?php endif; ?>
                 </a>
             <?php endforeach; ?>

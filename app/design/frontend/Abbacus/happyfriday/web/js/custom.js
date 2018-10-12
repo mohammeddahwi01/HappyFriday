@@ -46,6 +46,14 @@ require(['jquery'],function($){
 			jQuery('.custom-review-wrapper .review-form').toggle();
 		});
 
+
+		//toggle filter 
+
+		jQuery('.catalog-topnav.amasty-catalog-topnav').slideUp();
+		jQuery('.toolbar-toggle').on('click',function(){
+			jQuery('.catalog-topnav.amasty-catalog-topnav').slideToggle();
+		});
+
 	});
 
 	jQuery(window).load(function(){
