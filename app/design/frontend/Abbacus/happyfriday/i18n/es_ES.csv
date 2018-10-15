@@ -1,3 +1,8 @@
 "Add Review","AÑADIR COMENTARIO",theme,frontend/Abbacus/happyfriday
 "Fill in the fields to complete the payment","Rellene los campos para completar el cobro",theme,frontend/Abbacus/happyfriday
 "With your credit or debit card","Con su tarjeta de credtio o debito",theme,frontend/Abbacus/happyfriday
+"Your order has been successfully completed! In brief you will receive an email with all the information.","TU pedido se ha realizado con exito! En breves recibiras un correo con toda la informacion",theme,frontend/Abbacus/happyfriday
+"Order number: %1.","Numero de pedido: %1.",theme,frontend/Abbacus/happyfriday
+"For any questions you can contact us via:","para cualquier duda pueqes contactar con nosotoros via:",theme,frontend/Abbacus/happyfriday
+"This does not end here","Esto no acaba aqui",theme,frontend/Abbacus/happyfriday
+"We give you a %1 discount on your next purchase with the code:","Te regalamos un %1 de descuento en tu proxima compra con el codigo:",theme,frontend/Abbacus/happyfriday

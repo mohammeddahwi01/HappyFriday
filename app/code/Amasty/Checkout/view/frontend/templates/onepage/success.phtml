@@ -20,28 +20,29 @@ $mediaUrl = $currentStore->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_
 	        </div>
 	        <div class="success-right">
 		        <div class="success-messages">
-		            <p><?= __('We\'ll email you an order confirmation with details and tracking info.') ?></p>
+		            <p><?= __('Your order has been successfully completed! In brief you will receive an email with all the information.') ?></p>
 		            <?php if ($block->getCanViewOrder()) :?>
-		                <p class="orderno"><?= __('Your order number is: %1.', sprintf('<a href="%s" class="order-number"><strong>%s</strong></a>', $block->escapeHtml($block->getViewOrderUrl()), $block->escapeHtml($block->getOrderId()))) ?></p>
+		                <p class="orderno"><?= __('Order number: %1.', sprintf('<a href="%s" class="order-number"><strong>%s</strong></a>', $block->escapeHtml($block->getViewOrderUrl()), $block->escapeHtml($block->getOrderId()))) ?></p>
 		            <?php  else :?>
-		                <p class="orderno"><?= __('Your order # is: <span>%1</span>.', $block->escapeHtml($block->getOrderId())) ?></p>
+		                <p class="orderno"><?= __('Order number: <span>%1</span>.', $block->escapeHtml($block->getOrderId())) ?></p>
 		            <?php endif;?>
 		        </div>
 		        <div class="contact-info">
-					<p class="info-msg">For any questions you can contact us via:</p>
+					<p class="info-msg"><?= __('For any questions you can contact us via:') ?></p>
 					<div class="phone-number"><span class="telephone"></span> <a href="tel:965 59 99 56">965 59 99 56</a></div>
 					<div class="email-friday"><span class="email"></span> <a href="mailto:adrian@happyfriday.es">adrian@happyfriday.es</a></div>
 				</div>
 				<div class="coupen-info">
-					<p>This does not end here</p>
-					<p>We give you a <b>10%</b> discount on your next purchase with the code:</p>
-					<div class="coupen-code">HAPPY!</div>
+					<p><?= __('This does not end here') ?></p>
+					<p><?= __('We give you a %1 discount on your next purchase with the code:', '<b>10%</b>') ?></p>
+					<p><img src="<?php echo $mediaUrl.'wysiwyg/happy.png'?>" alt="happy" /></p>
 				</div>
 	    	</div>
 	    </div>
 
 	    <?= $block->getChildHtml('details') ?>   
     <?php endif;?>
+					
 		           
 
     <?= $block->getAdditionalInfoHtml() ?>
