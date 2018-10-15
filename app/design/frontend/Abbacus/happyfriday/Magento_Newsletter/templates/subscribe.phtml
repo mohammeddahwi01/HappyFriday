@@ -44,38 +44,48 @@ $mediaUrl =  $storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterfa
 ?>
 <div class="container">
 	<div class="block newsletter">
-		<a href="<?php echo $baseUrlWithOutIndexPhp;?>shipping/"><img id="free_shipping" title="" alt="" src="<?php echo $mediaUrl;?>newsletter/free-shipping.png" width="600" height="109" /></a>
-		<div class="title"><strong><?= $block->escapeHtml(__('Newsletter')) ?></strong></div>
+		<!-- <a href="<?php echo $baseUrlWithOutIndexPhp;?>shipping/"><img id="free_shipping" title="" alt="" src="<?php echo $mediaUrl;?>newsletter/free-shipping.png" width="600" height="109" /></a>
+		<div class="title"><strong><?= $block->escapeHtml(__('Newsletter')) ?></strong></div> -->
 		<div class="content">
-			<form class="form subscribe"
-				novalidate
-				action="<?= $block->escapeUrl($block->getFormActionUrl()) ?>"
-				method="post"
-				data-mage-init='{"validation": {"errorClass": "mage-error"}}'
-				id="newsletter-validate-detail">
-				<div class="field newsletter">
-					<label class="label" for="newsletter"><span><?= $block->escapeHtml(__('SIGN UP FOR OUR E-NEWS')) ?></span></label>
-					<div class="control">
-						<input name="email" type="email" id="newsletter"
-									placeholder="<?= $block->escapeHtmlAttr(__('Enter your email address')) ?>"
-									data-validate="{required:true, 'validate-email':true}"/>
+			<div class="discount-msg">
+				<h3 class="msg">We have a 10% discount. for you! Subscribe and keep informed of all our offers.</h3>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+			</div>
+			<div class="subscribe-section">
+				<form class="form subscribe"
+					novalidate
+					action="<?= $block->escapeUrl($block->getFormActionUrl()) ?>"
+					method="post"
+					data-mage-init='{"validation": {"errorClass": "mage-error"}}'
+					id="newsletter-validate-detail">
+					<div class="field newsletter">
+						<label class="label" for="newsletter"><span><?= $block->escapeHtml(__('SIGN UP FOR OUR E-NEWS')) ?></span></label>
+						<div class="control">
+							<input name="email" type="email" id="newsletter"
+										placeholder="<?= $block->escapeHtmlAttr(__('Enter your email address')) ?>"
+										data-validate="{required:true, 'validate-email':true}"/>
+						</div>
+						<div class="actions">
+							<button class="action subscribe primary" title="<?= $block->escapeHtmlAttr(__('Subscribe')) ?>" type="submit">
+								<span><?= $block->escapeHtml(__('Subscribe')) ?></span>
+							</button>
+						</div>
 					</div>
-					<div class="actions">
-						<button class="action subscribe primary" title="<?= $block->escapeHtmlAttr(__('Subscribe')) ?>" type="submit">
-							<span><?= $block->escapeHtml(__('Subscribe')) ?></span>
-						</button>
-					</div>
-				</div>
-				
-				<div class="field privacy required">
-					<div class="control">
-					<?php $link = $baseUrlWithOutIndexPhp.'privacy/'; ?>
-						<input type="checkbox" name="privacy" value="1" class="checkbox" data-validate="{required:true}" /><?php echo __('I have read and accept the <a href="%1">Privacy policy</a>',$link); ?>
-					</div>
-				</div>
-				
-				
-			</form>
+					
+					<div class="field privacy required">
+						<div class="control">
+						<?php $link = $baseUrlWithOutIndexPhp.'privacy/'; ?>
+							<div class="checkbox-container">
+							<input type="checkbox" name="privacy" value="1" class="checkbox" data-validate="{required:true}" />
+							<div class="checkmark"></div>
+							</div>
+							<div class="customer-acceptance">
+								<?php echo __('I have read and accept the <a href="%1">Privacy policy</a>',$link); ?>
+							</div>
+						</div>
+					</div>	
+				</form>
+			</div>
 		</div>
 	</div>
 </div>
