@@ -257,12 +257,29 @@ class Products extends \Magento\Catalog\Block\Product\AbstractProduct implements
             $_collection->addIdFilter($randomIds);
         };
 
-        $_collection = $this->_addProductAttributesAndPrices($_collection);
+        /*$_collection = $this->_addProductAttributesAndPrices($_collection);
         $_collection->getSelect()
             ->join(['bestsellers' => $_collection->getTable('sales_bestsellers_aggregated_yearly')],
                 'e.entity_id = bestsellers.product_id AND bestsellers.store_id = '.$this->getStoreId(),
                 ['qty_ordered','rating_pos'])
-            ->order('rating_pos');
+            ->order('rating_pos');*/
+
+$_collection = $this->_addProductAttributesAndPrices($_collection);
+$_collection->getSelect()->join(['bestsellers' => $_collection->getTable('sales_bestsellers_aggregated_yearly')],
+                                    'e.entity_id = bestsellers.product_id AND bestsellers.store_id = '.$this->getStoreId(),
+                                    ['qty_ordered','rating_pos'])
+                        ->order('qty_ordered DESC');
+$_collection->addStoreFilter($this->getStoreId())
+                        ->setPageSize($this->getProductsCount())
+                        ->setCurPage(1);
+$_collection->getSelect()->group('e.entity_id')->limit(15);
+/*foreach ($_collection as $_collectionss) {
+    echo "<pre>";
+    print_r($_collectionss->getData());
+    # code...
+}
+die();*/
+            
 
 
         /** Configurable products from simple product added as well into best seller list */
@@ -303,7 +320,7 @@ class Products extends \Magento\Catalog\Block\Product\AbstractProduct implements
             $item = $items->getItemById($key);
             if (!$item) {
                 $item = $configurableProductsCollection->getItemById($key);
-                $item->setData('rating_pos', $ratingPos);
+                /*$item->setData('rating_pos', $ratingPos);*/
             }
 
             if ($item) {
