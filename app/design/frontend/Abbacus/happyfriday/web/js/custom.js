@@ -1,4 +1,4 @@
-require(['jquery'],function($){
+require(['jquery','owl_carousel'],function($){
 	jQuery(document).ready(function(){
 		jQuery('.product.info.detailed .product.data.items .data.item.title:first-child').click();
 		jQuery(window).on('scroll', stickyheader);
@@ -52,7 +52,10 @@ require(['jquery'],function($){
 		jQuery('.catalog-topnav.amasty-catalog-topnav').slideUp();
 		jQuery('.toolbar-toggle').on('click',function(){
 			jQuery('.catalog-topnav.amasty-catalog-topnav').slideToggle();
+			jQuery(this).toggleClass('expanded');
 		});
+
+
 
 	});
 
@@ -68,3 +71,8 @@ require(['jquery'],function($){
 		},5000);
 	});
 });
+	
+
+
+
+
