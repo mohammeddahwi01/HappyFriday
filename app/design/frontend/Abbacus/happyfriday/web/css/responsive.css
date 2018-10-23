@@ -467,7 +467,7 @@ body .page-header .panel.wrapper {  width: auto; margin: 0px;  float: right;}
 
 .product.data.items .item.title a::after {  right: 0;  top: 15px;}
 
-.catalog-product-view .block-title.title > span {  background: #e7b909 none repeat scroll 0 0; float: none; display: inline-block;color: #fff;}
+.catalog-product-view .block-title.title > span { float: none; display: inline-block;color: #535242;}
 
 .catalog-product-view .block .title {  border-bottom: medium none; margin-bottom: 0;  text-align: center;}
 
