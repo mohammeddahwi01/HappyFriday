@@ -6,3 +6,8 @@
 "For any questions you can contact us via:","para cualquier duda pueqes contactar con nosotoros via:",theme,frontend/Abbacus/happyfriday
 "This does not end here","Esto no acaba aqui",theme,frontend/Abbacus/happyfriday
 "We give you a %1 discount on your next purchase with the code:","Te regalamos un %1 de descuento en tu proxima compra con el codigo:",theme,frontend/Abbacus/happyfriday
+"You are welcome!","¡Bienvenido!",module,Happyfriday_Customerlogin
+"Already a customer?","¿Ya eres cliente?",module,Happyfriday_Customerlogin
+"You are new?","¿Eres nuevo?",module,Happyfriday_Customerlogin
+"GET IN","ENTRAR",module,Happyfriday_Customerlogin
+"I WANT TO JOIN","QUIERO UNIRME",module,Happyfriday_Customerlogin

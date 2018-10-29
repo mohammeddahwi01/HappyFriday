@@ -14,7 +14,7 @@
 <form class="form create account form-create-account" action="<?= $block->escapeUrl($block->getPostActionUrl()) ?>" method="post" id="form-validate" enctype="multipart/form-data" autocomplete="off">
     <?= /* @noEscape */ $block->getBlockHtml('formkey'); ?>
     <fieldset class="fieldset create info">
-        <legend class="legend"><span><?= $block->escapeHtml(__('New Customer Register here')) ?></span></legend><br>
+        <legend class="legend"><span><?= $block->escapeHtml(__('You are new?')) ?></span></legend><br>
         <input type="hidden" name="success_url" value="<?= $block->escapeUrl($block->getSuccessUrl()) ?>">
         <input type="hidden" name="error_url" value="<?= $block->escapeUrl($block->getErrorUrl()) ?>">
         <?= $block->getLayout()->createBlock('Magento\Customer\Block\Widget\Name')->setTemplate('Happyfriday_Customerlogin::widget/name.phtml')->setObject($block->getFormData())->setForceUseCustomerAttributes(true)->toHtml() ?>
@@ -149,7 +149,7 @@
     <?php endif; ?>
     <div class="actions-toolbar">
         <div class="primary">
-            <button type="submit" class="action submit primary" title="<?= $block->escapeHtmlAttr(__('Create an Account')) ?>"><span><?= $block->escapeHtml(__('Create an Account')) ?></span></button>
+            <button type="submit" class="action submit primary" title="<?= $block->escapeHtmlAttr(__('Create an Account')) ?>"><span><?= $block->escapeHtml(__('I WANT TO JOIN')) ?></span></button>
         </div>
         <div class="secondary">
             <a class="action back" href="<?= $block->escapeUrl($block->getBackUrl()) ?>"><span><?= $block->escapeHtml(__('Back')) ?></span></a>

@@ -8,8 +8,8 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="content">
+            <block class="Magento\Framework\View\Element\Template" before="-" name="customer_page_title" template="Happyfriday_Customerlogin::title/title.phtml"/>
            <block class="Magento\Customer\Block\Form\Register" name="customer_form_register" template="Happyfriday_Customerlogin::form/register.phtml">
-                <container name="form.additional.info" as="form_additional_info"/>
                 <container name="customer.form.register.fields.before" as="form_fields_before" label="Form Fields Before" htmlTag="div" htmlClass="customer-form-before"/>
             </block>
         </referenceContainer>
@@ -18,3 +18,4 @@
         <move element="customer_form_register" destination="customer.login.container" after="-"/>
     </body>
 </page>
+                

@@ -182,15 +182,17 @@
 	border-right: 1px solid #dedede;
 }
 	
-
-
 .customer-account-login .block.block-customer-login .block-title strong, .customer-account-login .create.account.form-create-account .create.info legend span{
 	display: block;
     text-align: center;
     font-weight: 700;
-    font-size: 18px;
-    font-family: 'roboto_condensedlight','sans-serif';
-    line-height: 16px;
+    font-size: 20px;
+    font-family: 'RobotoCondensed-Regular','sans-serif';
+    line-height: 24px;
+}
+
+.customer-account-login .block.block-customer-login .block-title, .customer-account-login .create.account.form-create-account .fieldset.create legend {
+	border-bottom-color: #cecece;
 }
 
 .customer-account-login .create.account.form-create-account .create.info {
@@ -198,7 +200,7 @@
 }
 
 .customer-account-login .block.block-customer-login .field.note {
-	font-size: 16px;
+	font-size: 14px;
 	text-align:center;
 }
 
@@ -213,8 +215,89 @@
 
 .customer-account-login .block.block-customer-login .control input, .customer-account-login .create.account.form-create-account input {
 	background-color: #fff;
-	color: #5e5e5e;
-	border: 1px solid #5e5e5e;
+	color: #2C2A29;
+	font-family: 'roboto_condensedlight','sans-serif';
+	font-weight: 300;
+	font-size: 14px;
+	border: 1px solid #535242;
+}
+
+.customer-account-login .page-main {
+	background-color: #F5F6F7;
+	max-width: initial;
+}
+
+.title-wrapper {
+	text-align: center;
+	margin-top: 65px;
+    float: left;
+    width: 100%;
+}
+	 
+.login-registration-title {
+	color: #E7C600;
+	font-family: 'Caveatregular';
+	font-size: 30px;
+	font-weight: bold;
+	line-height: 38px;
+	margin-bottom: 15px;
+}
+
+.custom-additional {
+	float: left;
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+.custom-additional #remember-me-box  {
+	float: left;
+}
+
+.custom-additional .secondary {
+	float: right;
+}
+
+.custom-additional .secondary a {
+	color: #535242;
+	text-decoration: underline !important;
+	font-size: 14px;
+	line-height: 16px;
+}
+
+.checkbox-container {
+	display: inline-block;
+	position: relative;
+	width: 16px;
+	height: 16px;
+	border: 1px solid #979797;
+	margin-right: 10px;
+    vertical-align: text-top;
+}
+
+.checkbox-container .checkmark {
+	position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #523242;
+    top: 2px;
+    left: 2px;
+    opacity: 0;
+}
+
+.checkbox-container input {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	opacity: 0;
+}
+
+.checkbox-container input:checked + .checkmark {
+	opacity: 1;
+}
+
+.custom-additional .tooltip.wrapper {
+	display: none;
 }
 
 .customer-account-login .block.block-customer-login .actions-toolbar .primary, .customer-account-login .create.account.form-create-account .actions-toolbar .primary {
@@ -222,13 +305,15 @@
 }
 
 .customer-account-login .block.block-customer-login .action.login.primary, .customer-account-login .create.account.form-create-account .action.submit.primary {
-	font-family: 'roboto_condensedlight', 'sans-serif';
+	font-family: 'RobotoCondensed-Bold', 'sans-serif';
 	font-size: 16px;
-	background-color: #5e5e5e;
+	background-color: #535242;
 	color: #fff;
 	border-radius: 0;
 	width: 100%;
 	border:none;
+	height: 46px;
+	
 }
 
 /* product view page */
