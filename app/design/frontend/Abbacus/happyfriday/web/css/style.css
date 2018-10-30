@@ -2101,11 +2101,14 @@ body .navigation .level0 .submenu a:hover {
   color: #fff !important;
 }
 body #cwsMenu-1 .cwsMenu > li > a {
-  color: #585756;
-  font-weight: normal; font-size: 15px;
-  line-height: inherit; background: transparent;
+  color: #535242;
+  font-weight: normal; 
+  font-size: 18px;
+  line-height: inherit; 
+  background: transparent;
+  letter-spacing: 0.09px;
   padding: 0;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 body #cwsMenu-1 .cwsMenu.horizontal > li {
   border-right: none; margin-right: 12px;
@@ -2165,7 +2168,7 @@ body #cwsMenu-1 .cwsMenu.mega-menu > li.column-1:not(.megamenu) li.parent > a > 
   display: none;
 }
 
-.page-header .block-search input{ border:1px solid #bfbfbf; font-size:14px; width:250px; color:#888888; float:left; 
+.page-header .block-search input{ border:1px solid #535242; font-size:12px; width:286px; color:#535242; float:left; 
 padding:0 30px 0 5px;-webkit-transition: all .5s;-moz-transition: all .5s;transition: all .5s; background: #fff; height:29px; line-height:29px;font-family: 'roboto_condensedlight'; margin-bottom:18px;}
 
 .block-search .action.search.disabled, .block-search .action.search[disabled], fieldset[disabled] .block-search .action.search {
@@ -2176,9 +2179,10 @@ padding:0 30px 0 5px;-webkit-transition: all .5s;-moz-transition: all .5s;transi
 }
 .block-search {
   float: right;
-  padding-left: 15px;
+  padding-left: 0px;
+  margin-left: 15px;
   position: relative;
-  width: 266px;
+  width: 286px;
   z-index: 4;
 }
 body #cwsMenu-1.cwsMenuOuter {
@@ -2208,10 +2212,10 @@ body #cwsMenu-1.cwsMenuOuter {
   padding-right: 2px; float: right;
 }
 .header.panel > .header.links li > a {
-  color: #585756 !important;
+  color: #535242 !important;
 }
 .header.panel > .header.links li > a:hover, .header.panel > .header.links li > a.active {
-  color: #e7b907 !important;
+  color: #e7c600 !important;
 }
 .header.panel > .header.links > .authorization-link::after {
   display: none;
@@ -2256,7 +2260,7 @@ display: none !important;
   border-bottom: none;
 }
 .panel.header.bottom.wishlist {
-  float: right;margin: 6px 6px 0 0;
+  float: right;margin: 6px 10px 0 0;
 }
 body #cwsMenu-1 .cwsMenu > li:hover > a {
   background:none !important;
@@ -2281,7 +2285,7 @@ body #cwsMenu-1 .cwsMenu > li:hover > a {
   text-shadow: none;
 }
 .header-bottom-line {
-  border-bottom: 1px dotted #b5b4b5;float:left; width: 100%;
+  float:left; width: 100%;
 }
 .owl-theme .owl-controls .owl-nav .owl-prev[class*="owl-"]::after {
   display: none !important;
@@ -2310,7 +2314,7 @@ p {
   margin-bottom: 10px;
 }
 body .nav-sections {
-  margin-top: 10px;
+  margin-top: 0px;
 }
 .feature {
   margin-bottom: 30px;
@@ -2366,9 +2370,7 @@ body .nav-sections {
   max-width: 100%;
   width: 100%;
 }
-.page-footer {
-  font-family: "rockwell_lightregular";
-}
+
 .social_icons {
   float: left;
   margin-bottom: 15px;
@@ -2382,16 +2384,16 @@ body .nav-sections {
 
 .copyright {
   clear: both;
-  color: #4f4d4d;
-  font-family: "rockwell_lightregular";
-  font-size: 15px;border-top: 1px dotted #b5b4b5;
+  font-size: 15px;border-top: 1px dotted #d8d8d8;
   padding:30px 10px; background: none;float:left; width: 100%;
   text-align: center;
 }
 .page-footer {
   float: left;
   width: 100%;
+  padding-bottom: 38px;
 }
+ 
 .page-footer  .container{
   margin: 0 auto;
   max-width: 1410px;
@@ -2511,8 +2513,7 @@ text-transform: none;
   float: left;
   width: 34%;
 }
-.page-footer {border-top: 1px dotted #b5b4b5;}
-.page-footer .footer.footer-bottom{border-top: 1px dotted #b5b4b5;padding-top: 50px ; padding-bottom: 0;}
+.page-footer .footer.footer-bottom{padding-top: 50px ; padding-bottom: 0;}
 .page-footer .footer {  padding: 30px 0 20px;}
 #eg-cm-wrap.bottomfullwidth {
   background: #f0f0f0 none repeat scroll 0 0;
@@ -4252,8 +4253,9 @@ select:focus{outline: none; box-shadow: none !important;}
   margin: 0;
   text-transform: uppercase;
   width: 100%;
-  color: #585756;
-  font-size: 12px;
+  color: #535242;
+  font-family: 'RobotoCondensed-Regular','sans-serif';
+  font-size: 14px;
   letter-spacing: 1px;
 }
 .hf_top_hdr .main{margin: 0 auto; max-width: 480px;}

@@ -94,7 +94,7 @@ body .nav-sections {  margin: 0 !important; background: #fff;}
 
 .nav-sections-item-title.active a {  color: #000;}
 
-.nav-sections-item-content {  margin-top: 69px;  padding: 0 0 25px;}
+.nav-sections-item-content {  margin-top: 69px;  padding: 0 0 0;}
 
 .nav-sections .header.links li > a { color: #585756;font-weight: normal;line-height: inherit; font-size: 12px;}
 
@@ -108,7 +108,7 @@ body .nav-sections {  margin: 0 !important; background: #fff;}
 
 .nav-sections .switcher-trigger strong {  color: #e7b909;  letter-spacing: 2px;  text-align: center;  text-decoration: none;}
 
-.nav-sections .switcher-dropdown li a {  display: inline-block;  letter-spacing: 1px;  text-align: center;  width: 100%;}
+.nav-sections .switcher-dropdown li a {  display: inline-block;  letter-spacing: 1px;  text-align: center;  width: 100%; color: #535242}
 
 .nav-sections .switcher-dropdown li a:hover {color: #e7b909 !important;}
 
@@ -247,7 +247,7 @@ body .page-header .panel.wrapper {  width: auto; margin: 0px;  float: right;}
 
 .minicart-wrapper .action.showcart .counter.qty {  background: #e5c50e none repeat scroll 0 0 !important;  border-radius: 50%;  color: #fff;  font-size: 14px;  height: auto;  line-height: normal;  min-height: 19px;  min-width: 19px;  position: absolute;  right: -10px;  top: -12px;}
 
-.block-search .label::before {  font-size: 16px;  line-height: 17px;  vertical-align: top;}
+.block-search .label::before {  font-size: 16px;   vertical-align: top;}
 
 .nav-toggle::before {  color: #e5c718 !important;font-size: 24px;}
 
@@ -277,7 +277,7 @@ body .page-header .panel.wrapper {  width: auto; margin: 0px;  float: right;}
 
 .page-footer .footer {  padding:0 0 !important;border-top: medium none;}
 
-.page-footer {  border-top: 1px solid #dfdfdf;}
+.page-footer {  border-top: 1px solid #dfdfdf;padding-bottom: 0}
 
 .block.newsletter .field label.label {  color: #fff; margin: 4px 0 3px;}
 
@@ -299,15 +299,15 @@ body .page-header .panel.wrapper {  width: auto; margin: 0px;  float: right;}
 
 .page-footer .footer.footer-bottom {  border-top: medium none;}
 
-.page-footer .col-md-2.ftr-mob1 {  border-bottom: 1px dotted #504f40; margin-bottom: 0 !important;  padding: 12px 0;  text-align: center;}
+.page-footer .col-md-2.ftr-mob1 {  border-bottom: 1px solid #535242; margin-bottom: 0 !important;  padding: 12px 10px;  text-align: center;}
 
-.page-footer .col-md-2.ftr-mob1 .f_links li a {  color: #4f4d4d;  font-weight: 700; font-size: 12px;  text-transform: uppercase;}
+.page-footer .col-md-2.ftr-mob1 .f_links li a {   font-size: 12px;  text-transform: uppercase;}
 
-.page-footer .ftr-mob1 h4 {  float: none;  display: inline-block; font-size: 12px; margin: 0 10px; width: auto;  padding: 0;}
+.page-footer .ftr-mob1 h4 {  float: none;  font-size: 12px; margin: 0 10px; width: auto;  padding: 0; text-align: left}
 
-.page-footer .ftr-mob1 .f_links {  float: none;  display: inline-block;  width: auto;}
+.page-footer .ftr-mob1 .f_links {  float: none; width: auto;}
 
-.page-footer .ftr-mob1 .f_links li {  display: inline-block; margin: 0 10px; float: none;  width: auto;  padding: 0;}
+.page-footer .ftr-mob1 .f_links li {  margin: 5px 10px; float: none;  width: auto;  padding: 0;text-align: left;}
 
 .footer.content .block {  margin-bottom: 0;}
 
@@ -323,7 +323,7 @@ body .page-header .panel.wrapper {  width: auto; margin: 0px;  float: right;}
 
 .page-footer .col-md-2.ftr-mob2 .f_links li span a {  color: #fff !important;}
 
-.copyright {  padding: 21px 10px;background: #424241 none repeat scroll 0 0;color: #ffffff;font-size: 12px;text-transform: uppercase;}
+.copyright {  padding: 21px 10px;font-size: 12px;text-transform: uppercase;}
 
 .feature.container > a{ padding: 0 10px; float:left; width: 100%;}
 
@@ -715,7 +715,7 @@ body .page-header .panel.wrapper {  width: auto; margin: 0px;  float: right;}
 
 .minicart-wrapper .block-minicart::before {  right: 96px;}
 
-.block-search .control {  position: absolute;  right: 0;  top: 30px;  width: 200px;}
+.block-search .control {  position: absolute;  right: -25px;  top: 30px;  width: 200px;}
 
 .page-header .block-search input:focus {  box-shadow: none;}
 
