@@ -50,7 +50,7 @@ require(['jquery','owl_carousel'],function($){
 		//toggle filter 
 
 		jQuery('.catalog-topnav.amasty-catalog-topnav').slideUp();
-		jQuery('.toolbar-toggle').on('click',function(){
+		jQuery('body').on('click', '.toolbar-toggle', function(){
 			jQuery('.catalog-topnav.amasty-catalog-topnav').slideToggle();
 			jQuery(this).toggleClass('expanded');
 		});

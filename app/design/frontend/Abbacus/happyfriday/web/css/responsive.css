@@ -619,7 +619,7 @@ body .page-header .panel.wrapper {  width: auto; margin: 0px;  float: right;}
 
 .page-products .sorter {  margin-left: 100px; border-left:1px solid #ffffff; }
 
-.filter.active .filter-options {  padding: 0 20px;}
+.filter.active .filter-options {  padding: 0 20px; position: static; padding-top: 10px;}
 
 .filter.active .filter-title strong::after { float: right;  margin: 14px 10px 0 0;}
 
@@ -631,7 +631,7 @@ body .page-header .panel.wrapper {  width: auto; margin: 0px;  float: right;}
 
 .filter-no-options .filter-title::before {  display: none;}
 
-.page-products.page-with-filter .columns .sidebar-main {  display: none;}
+/* .page-products.page-with-filter .columns .sidebar-main {  display: none;}*/
 
 .block-content.filter-content {  float: left;  position: relative;  width: 100%;  margin: 20px 0 20px;}
 
