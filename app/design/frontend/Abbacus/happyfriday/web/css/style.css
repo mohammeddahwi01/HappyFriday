@@ -4122,7 +4122,9 @@ select:focus{outline: none; box-shadow: none !important;}
   color: #504F40;
 }	
 .iwd_opc_wrapper .iwd_opc_alternative_wrapper button.iwd_opc_button.iwd_opc_place_order_button.active {
-  background: #5e5e5e;
+  background: #e7c600;
+  color: #535242 !important;
+  border-color: #e7c600;
 }
 .iwd_opc_wrapper .iwd_opc_alternative_wrapper button.iwd_opc_button.iwd_opc_place_order_button.active:hover, .iwd_opc_wrapper .iwd_opc_alternative_wrapper button.iwd_opc_button.iwd_opc_place_order_button.active:focus, .iwd_opc_wrapper .iwd_opc_alternative_wrapper button.iwd_opc_button.iwd_opc_place_order_button.active:active {
   background: #e3c200 none repeat scroll 0 0 !important;
@@ -4139,9 +4141,12 @@ select:focus{outline: none; box-shadow: none !important;}
   color: #5e5e5e;
 }
 .iwd_main_wrapper button.iwd_opc_small_button.active, .iwd_main_wrapper a.iwd_opc_small_button.active, .iwd_main_wrapper div.iwd_opc_small_button.active, .iwd_main_wrapper a.iwd_opc_button.active, .iwd_main_wrapper div.iwd_opc_button.active, .iwd_main_wrapper button.iwd_opc_button.active {
-  background-color: #5e5e5e;
-  border-color: #504f40;
-  color: #ffffff !important;
+  background-color: #fff;
+  border-color: #535242;
+  color: #535242 !important;
+  font-family: 'RobotoCondensed-Bold','sans-serif';
+  font-size: 16px;
+  border-radius: 0;
 }
 .iwd_main_wrapper button.iwd_opc_small_button, .iwd_main_wrapper a.iwd_opc_small_button, .iwd_main_wrapper div.iwd_opc_small_button, .iwd_main_wrapper a.iwd_opc_button, .iwd_main_wrapper div.iwd_opc_button, .iwd_main_wrapper button.iwd_opc_button {
   background: #5e5e5e;
@@ -4149,9 +4154,9 @@ select:focus{outline: none; box-shadow: none !important;}
   color: #fff !important;
 }
 .iwd_main_wrapper button.iwd_opc_small_button.active:hover, .iwd_main_wrapper a.iwd_opc_small_button.active:hover, .iwd_main_wrapper div.iwd_opc_small_button.active:hover, .iwd_main_wrapper a.iwd_opc_button.active:hover, .iwd_main_wrapper div.iwd_opc_button.active:hover, .iwd_main_wrapper button.iwd_opc_button.active:hover, .iwd_main_wrapper button.iwd_opc_small_button.active:focus, .iwd_main_wrapper a.iwd_opc_small_button.active:focus, .iwd_main_wrapper div.iwd_opc_small_button.active:focus, .iwd_main_wrapper a.iwd_opc_button.active:focus, .iwd_main_wrapper div.iwd_opc_button.active:focus, .iwd_main_wrapper button.iwd_opc_button.active:focus, .iwd_main_wrapper button.iwd_opc_small_button.active:active, .iwd_main_wrapper a.iwd_opc_small_button.active:active, .iwd_main_wrapper div.iwd_opc_small_button.active:active, .iwd_main_wrapper a.iwd_opc_button.active:active, .iwd_main_wrapper div.iwd_opc_button.active:active, .iwd_main_wrapper button.iwd_opc_button.active:active {
-  background: #e3c200 none repeat scroll 0 0 !important;
-  color: #ffffff;
-  border-color: #E3C200 !important;
+  background: #535242 none repeat scroll 0 0 !important;
+  color: #ffffff !important;
+  border-color: #535242 !important;
 }
 
 .iwd_main_wrapper button.iwd_opc_small_button:hover, .iwd_main_wrapper a.iwd_opc_small_button:hover, .iwd_main_wrapper div.iwd_opc_small_button:hover, .iwd_main_wrapper a.iwd_opc_button:hover, .iwd_main_wrapper div.iwd_opc_button:hover, .iwd_main_wrapper button.iwd_opc_button:hover {
