@@ -3049,7 +3049,7 @@ text-align: right;
 width: 100%;
 }
 .catalog-product-view .box-tocart .action.tocart {
-  background: #5e5e5e none repeat scroll 0 0;
+  background: #535242 none repeat scroll 0 0;
   border: medium none;
   border-radius: 0;
   font-family: "rockwell_lightregular";
@@ -3097,7 +3097,7 @@ width: 100%;
   background: transparent url(../images/arrss.jpg) no-repeat right center!important;
   padding:12px 0 10px !important;
   height: auto;
-  line-height: normal;border-bottom: 1px dotted #b4b3b4;
+  line-height: normal;border-bottom: 1px solid #979797;
 color: #323231;
 cursor: pointer;
 font-size: 15px;
@@ -3746,6 +3746,7 @@ select:focus{outline: none; box-shadow: none !important;}
 .catalog-product-view .magebuzz-social .email_button{ background: url(../images/h-mail.jpg) no-repeat center center}
 .catalog-product-view.page-layout-1column .product.media {
   position: relative;
+  z-index: 3;
 }
 .catalog-product-view .magebuzz-social {
   display: block;
