@@ -7,20 +7,19 @@
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
-		<referenceContainer name="header.container">
+    	<referenceContainer name="header.container" htmlClass="page-header sticky">
 			<container name="new.header.wrapper" as="new-container" before="-" htmlClass="headerwrapper" htmlTag="div" />
 		</referenceContainer>
 		<referenceContainer name="header.panel">
-            <container name="header.panel.top" label="Page Header Panel Top" htmlTag="div" htmlClass="panel header top">
-			<block class="Magento\Framework\View\Element\Html\Links" name="header.links">
-                <arguments>
-                    <argument name="css_class" xsi:type="string">header links</argument>
-                </arguments>
-            </block>
-			</container>
+            <container name="header.panel.top" label="Page Header Panel Top" htmlTag="div" htmlClass="panel header top" />
 			<container name="header.panel.bottom" label="Page Header Panel Bottom" htmlTag="div" htmlClass="panel header bottom">
 				<container name="header.panel.bottom.wishlist" label="Page Header Panel Bottom Whislist" htmlTag="div" htmlClass="panel header bottom wishlist">
 				</container>
+				<block class="Magento\Framework\View\Element\Html\Links" name="header.links">
+	                <arguments>
+	                    <argument name="css_class" xsi:type="string">header links</argument>
+	                </arguments>
+            	</block>
 			</container>
 		</referenceContainer>
         <referenceBlock name="logo">
@@ -85,5 +84,7 @@
         <referenceBlock name="product.review.form" remove="true" />
         <referenceBlock name="product.info.review" remove="true" /> -->
 		<move element="wish-list-link" destination="header.panel.bottom.wishlist" after="minicart" />	
+		<move element="header.links" destination="header.panel.bottom" after="-" />
+		<move element="header.panel.bottom" destination="header.panel" after="header.panel.top" />
 	</body>
 </page>

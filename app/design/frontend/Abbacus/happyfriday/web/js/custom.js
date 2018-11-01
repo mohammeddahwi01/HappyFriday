@@ -1,17 +1,27 @@
 require(['jquery','owl_carousel'],function($){
 	jQuery(document).ready(function(){
 		jQuery('.product.info.detailed .product.data.items .data.item.title:first-child').click();
-		jQuery(window).on('scroll', stickyheader);
+		 jQuery(window).on('scroll', stickyheader);
 		function stickyheader() {
-			if(jQuery(window).scrollTop() > 50) {
-				jQuery('.page-header').addClass('sticky');
-				jQuery('.block-search + .header.links').insertAfter(jQuery('.panel.header.bottom .minicart-wrapper'));
-				var height = jQuery('.page-header.sticky').innerHeight();
+			// if(jQuery(window).scrollTop() > 50) {
+			// 	jQuery('.page-header').addClass('sticky');
+			// 	jQuery('.block-search + .header.links').insertAfter(jQuery('.panel.header.bottom .minicart-wrapper'));
+			// 	var height = jQuery('.page-header.sticky').innerHeight();
+			// 	jQuery('.page-main').css('padding-top', height);
+			// }
+			// else {
+			// 	jQuery('.page-header').removeClass('sticky');
+			// 	jQuery('.minicart-wrapper + .header.links').insertAfter(jQuery('.panel.header.top .block.block-search'));
+			// 	jQuery('.page-main').css('padding-top', 0);
+			// }
+
+			if(jQuery(window).scrollTop() > 31) {
+				jQuery('.page-header').addClass('newsticky');
+				var height = jQuery('.page-header.sticky.newsticky').innerHeight();
 				jQuery('.page-main').css('padding-top', height);
 			}
 			else {
-				jQuery('.page-header').removeClass('sticky');
-				jQuery('.minicart-wrapper + .header.links').insertAfter(jQuery('.panel.header.top .block.block-search'));
+				jQuery('.page-header').removeClass('newsticky');
 				jQuery('.page-main').css('padding-top', 0);
 			}
 		}

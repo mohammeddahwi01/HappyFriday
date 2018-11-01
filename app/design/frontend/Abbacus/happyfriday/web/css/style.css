@@ -2194,17 +2194,16 @@ body #cwsMenu-1.cwsMenuOuter {
 
 .header.panel > .header.links {
   float: right;
-  margin-top: 4px;
 }
+  
 
 .header.panel > .header.links li {
   display: inline-block;
   font-size: 13px;
   letter-spacing: 1px; margin: 0;
   padding: 0;
-  text-transform: uppercase;
 }
-
+  
 .header.panel > .header.links li::after {
   color: #585756;
   content: "|";
@@ -4267,7 +4266,7 @@ select:focus{outline: none; box-shadow: none !important;}
   border-bottom: 1px dotted #b5b4b5;
   float: left; overflow: hidden;
   padding: 5px 5px;
-  text-align: center; margin: 0 0 7px;
+  text-align: center; margin: 0 0 0px;
   width: 100%;
 }
 .hf_top_hdr p {

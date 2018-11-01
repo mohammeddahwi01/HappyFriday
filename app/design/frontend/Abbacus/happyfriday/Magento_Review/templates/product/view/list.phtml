@@ -20,11 +20,15 @@ $product = $block->getProduct();
 $productId = $block->getProduct()->getId();
 $storeId = $storeManager->getStore()->getId();
 
-$totalReview = $reviewFactory->create()->getTotalReviews(
-    $productId,
-    false,
-    $storeId
-);
+$ratingCollection = $reviewFactory->create()->getResourceCollection()->addStoreFilter(
+$storeId)->addStatusFilter(\Magento\Review\Model\Review::STATUS_APPROVED)->addEntityFilter('product', $productId);
+$review_count = count($ratingCollection); // How many review in that specific product
+
+// $totalReview = $reviewFactory->create()->getTotalReviews(
+//     $productId,
+//     false,
+//     $storeId
+// );
 
 $reviewRenderer = $objectManager->create('Magento\Review\Block\Product\ReviewRenderer');
 $ratingSummary = $reviewRenderer->getReviewsSummaryHtml($product);
@@ -33,7 +37,7 @@ $ratingSummary = $reviewRenderer->getReviewsSummaryHtml($product);
 
 <div class="customizedreview">
     <div class="block-title">
-        <strong><?= $block->escapeHtml(__('Customer Reviews')) . ' (' . $totalReview . ')' ?></strong>
+        <strong><?= $block->escapeHtml(__('Customer Reviews')) . ' (' . $review_count . ')' ?></strong>
         <div class="average-rating h"><?php echo $ratingSummary ?></div>
     </div>
     <div class="review-form-wrapper">
