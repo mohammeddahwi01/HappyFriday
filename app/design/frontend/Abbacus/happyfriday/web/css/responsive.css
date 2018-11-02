@@ -393,7 +393,7 @@ body .page-header .panel.wrapper {  width: auto; margin: 0px;  float: right;}
 
 .column.main .product-items {  margin-left: 0;}
 
-.page-products .products-grid .product-item {  margin: 0 10px 28px !important;  width: calc(50% - 20px);}
+.page-products .products-grid .product-item {  margin: 0 0px 28px !important;  width: 50%;}
 
 .catalog-product-view .products-grid .product-item {  margin: 0 10px 28px !important;  width: calc(50% - 20px);}
 

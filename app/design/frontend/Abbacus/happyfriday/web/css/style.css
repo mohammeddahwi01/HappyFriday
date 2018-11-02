@@ -2020,8 +2020,9 @@ filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1);
 
 *{margin:0;padding:0;box-sizing:border-box;}
 img{border:none !important;outline:none;max-width:100%;}
-a{transition:all 0.4s ease 0s;-webkit-transition:all 0.4s ease 0s;text-decoration:none !important;outline:none;color:#523242;}
+a{transition:all 0.4s ease 0s;-webkit-transition:all 0.4s ease 0s;text-decoration:none !important;outline:none;color:#535242;}
 a:hover, a:focus{ outline:none; text-decoration:none; color: #e7b907;}
+a:visited, .alink:visited {color: #535242;}
 input{font-family: "roboto_condensedlight" ;ftransition:all 0.4s ease 0s;-webkit-transition:all 0.4s ease 0s;text-decoration:none;outline:none;-webkit-appearance:none;border:none; border-radius: 0;}
 /*select::-ms-expand{display:none;}*/
 select:focus{ outline:none; border:none;}
@@ -4026,7 +4027,7 @@ select:focus{outline: none; box-shadow: none !important;}
 
 
 
-@media (min-width:767px){
+@media (min-width:768px) {
 
 .page-products .products-grid .product-item.col-md-6 {
   width: 50%;

@@ -3,4 +3,7 @@
     <type name="Magento\Customer\Controller\Account\CreatePost">
         <plugin name="happyfridayCreateCustomerAccount" type="Happyfriday\Customerlogin\Plugin\Customer\CreatePost"/>
     </type>
+    <type name="Magento\Checkout\Model\DefaultConfigProvider">
+        <plugin name="custom_config_provider" type="Happyfriday\Customerlogin\Plugin\DefaultConfigProvider"/>
+    </type>
 </config>

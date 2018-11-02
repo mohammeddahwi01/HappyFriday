@@ -324,7 +324,11 @@
 	width: 100%;
 	border:none;
 	height: 46px;
-	
+}
+
+.customer-account-login .create.account.form-create-account .field.choice.forgotpassword,
+.customer-account-login .create.account.form-create-account .field.taxvat{
+	display: none;
 }
 
 /* product view page */
@@ -920,6 +924,10 @@
 	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.14);
 }
 
+.catalog-category-view .sidebar.sidebar-main .filter-options {
+	display: none !important;
+}
+
 
 .catalog-topnav .filter-options .filter-options-item {
 	float: none;
@@ -994,7 +1002,7 @@ ol[class*=am-filter-items-attr_]::-webkit-scrollbar-thumb, .filter-options-conte
     font-size: 16px;
     line-height: 19px;
     font-family: 'RobotoCondensed-Regular','sans-serif';
-    color: #5e5e5e;
+    color: #535242 !important;
     text-transform: lowercase;
 }
 
@@ -1022,14 +1030,14 @@ ol[class*=am-filter-items-attr_]::-webkit-scrollbar-thumb, .filter-options-conte
 }
 
 .name-brand-container {
-	position: relative;
+	/*position: relative;*/
 	padding-right: 20px;
 }
 
 .product-item-info .action.towishlist {
 	display: block !important;
-    right: 10px;
-    top: 27px;
+    right: 0px;
+    top: 35px;
     left: auto;
 }
 
@@ -1042,6 +1050,7 @@ ol[class*=am-filter-items-attr_]::-webkit-scrollbar-thumb, .filter-options-conte
     background-repeat: no-repeat;
     width: 25px;
     height: 25px;
+    margin: 0;
 }
 
 .catalog-category-view .swatch-attribute.size .swatch-option.text {
@@ -1177,6 +1186,7 @@ ol[class*=am-filter-items-attr_]::-webkit-scrollbar-thumb, .filter-options-conte
 	display: inline-block;
 	padding-right: 25px !important;
 	width: auto;
+	margin: 5px;
 }
 
 .catalog-category-view .filter-content .filter-current .item:before {
@@ -1308,6 +1318,18 @@ ol[class*=am-filter-items-attr_]::-webkit-scrollbar-thumb, .filter-options-conte
 
 /* new styles for checkout */
 
+
+.onepage-index-index .page-main {
+	max-width: initial;
+	background-color: #F5F6F7;
+}
+
+.onepage-index-index .page-main .column.main {
+	max-width: 1410px;
+	margin: 0 auto;
+}
+	
+
 .onepage-index-index .iwd_main_wrapper .field .input-text, .selectize-control.single .selectize-input, .iwd_main_wrapper .iwd_opc_field.iwd_opc_input, .iwd_main_wrapper .field .iwd_opc_select_container  {
 	height:34px;
 	border: 1px solid #535242;
@@ -1348,8 +1370,7 @@ ol[class*=am-filter-items-attr_]::-webkit-scrollbar-thumb, .filter-options-conte
 }
 
 
-
-
+    
 /* success page */
 
 .success-left, .success-right {
@@ -2358,11 +2379,13 @@ ol[class*=am-filter-items-attr_]::-webkit-scrollbar-thumb, .filter-options-conte
 	.page-header.sticky .logo {
 		margin-top: 0;
 		padding-top: 20px;
-		max-width: 250px;
+		max-width: 189px;
+		transition: all 0.4s ease 0s;
+	    -webkit-transition: all 0.4s ease 0s;
 	}
 
 	.page-header.sticky.newsticky .logo {
-		max-width: 200px;
+		max-width: 170px;
 	}
 		
 	.page-header.sticky #cwsMenu-1 {
@@ -2828,6 +2851,7 @@ ol[class*=am-filter-items-attr_]::-webkit-scrollbar-thumb, .filter-options-conte
 		background-repeat: no-repeat;
 		background-position: right;
 		vertical-align: top;
+		margin-right: 0;
 	}
 	.catalog-product-view .product.info.detailed {
 		padding-left: 0;
@@ -2854,8 +2878,13 @@ ol[class*=am-filter-items-attr_]::-webkit-scrollbar-thumb, .filter-options-conte
 		font-size: 14px;
 	}
 	.catalog-product-view .products-related .product-item-name a {
-		font-size: 18px;
+		font-size: 14px;
 	}
+
+	.catalog-product-view .owl-carousel .product-item-info .action.towishlist {
+		right: 7px;
+	}
+
 	.custom-review-container .review-leftside,.custom-review-container .review-rightside, .custom-review-container .review-form .action.submit.primary {
 		width:100%;
 	}
@@ -2999,9 +3028,7 @@ ol[class*=am-filter-items-attr_]::-webkit-scrollbar-thumb, .filter-options-conte
 
 	.product-item-info .action.towishlist {
 		top: 16px;
-		right: -10px;
 	}
-
 
 	.customer-account-login .block.block-customer-login, .customer-account-login .create.account.form-create-account {
 		width:100%;
@@ -3149,6 +3176,11 @@ ol[class*=am-filter-items-attr_]::-webkit-scrollbar-thumb, .filter-options-conte
 	}
 
 	/*sliders*/
+	
+	.product-item-brandname .product-item-link {
+		font-size: 14px;
+	}
+
 	.product-item-name .product-item-link {
 		font-size: 14px !important;
 	}

@@ -45,7 +45,7 @@ class Toolbar extends \Magento\Catalog\Block\Product\ProductList\Toolbar
     public function getAvailableGrid()
     {
 		//die('d');
-		$gridlimit=array('3'=>'3','4'=>'4');
+		$gridlimit=array('2'=>'2','3'=>'3','4'=>'4');
 		return $gridlimit;
     }
 	
