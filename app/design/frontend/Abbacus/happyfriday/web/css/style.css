@@ -2749,7 +2749,7 @@ letter-spacing: 0.5px;
   font-weight: bold;
 }
 .filter .block-subtitle {
-  border-bottom: 1px dotted #b4b4b5;
+  border-bottom: none;
 }
 .amshopby-category-collapse-icon {
   display: none;

@@ -223,8 +223,6 @@ body #cwsMenu-1 .cwsMenu.mega-menu > li.column-1:not(.megamenu) li.parent > a > 
 
 .page-header {  background: #fff none repeat scroll 0 0;  border-bottom: medium none;  float: left;  padding: 0px;  width: 100%; position:relative;}
 
-.header-bottom-line {  border-bottom: 1px dotted #504f40;}
-
 body .logo {  margin: 0;  width: 100%; float:left;}
 
 .page-header .header.content {  float: left; margin:10px 0 0 0;position: static;  text-align: left;  width: 164px;}
@@ -729,7 +727,7 @@ body .page-header .panel.wrapper {  width: auto; margin: 0px;  float: right;}
 
 .page-products .modes .modes-label {  font-size: 11px;  vertical-align: middle;}
 
-.page-products .filter.block {  padding: 0 8px;}
+.page-products .filter.block {  padding: 0;}
 
 .page-products .sorter {  padding: 0 10px;}
 
