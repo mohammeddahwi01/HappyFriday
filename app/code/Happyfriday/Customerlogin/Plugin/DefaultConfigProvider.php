@@ -16,7 +16,10 @@ class DefaultConfigProvider
      */
     protected $_paymentModelConfig;
     protected $shipconfig;
-     
+ 	
+ 	protected $storeManager;
+
+
     /**
      * @param ScopeConfigInterface $appConfigScopeConfigInterface
      * @param Config               $paymentModelConfig
@@ -24,12 +27,14 @@ class DefaultConfigProvider
     public function __construct(
         ScopeConfigInterface $appConfigScopeConfigInterface,
         Config $paymentModelConfig,
-        \Magento\Shipping\Model\Config $shipconfig
+        \Magento\Shipping\Model\Config $shipconfig,
+        \Magento\Store\Model\StoreManagerInterface $storeManager
     ) {
  
         $this->_appConfigScopeConfigInterface = $appConfigScopeConfigInterface;
         $this->_paymentModelConfig = $paymentModelConfig;
         $this->shipconfig = $shipconfig;
+        $this->storeManager = $storeManager;
     }
 	
 	public function afterGetConfig
@@ -55,6 +60,12 @@ class DefaultConfigProvider
 
 		$payments = $this->_paymentModelConfig->getActiveMethods();
         $paymentMethods = array();
+        $currentStore = $this->storeManager->getStore();
+        $mediaUrl = $currentStore->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA);
+        $paypalImage = $mediaUrl . 'wysiwyg/paypal.png';
+        $paypalMessage = 'With your credit or debit card';
+        $redsysImage = $mediaUrl . 'wysiwyg/icon_cards.jpg';
+        $redsysMessage = 'Fill in the fields to complete the payment';
 
         //$unwanted_payment_methods = ['free', 'paypal_billing_agreement', 'sfm_shopping_feed_order'];
         foreach ($payments as $paymentCode => $paymentModel) {
@@ -62,8 +73,18 @@ class DefaultConfigProvider
 	            $paymentTitle = $this->_appConfigScopeConfigInterface
 	                ->getValue('payment/'.$paymentCode.'/title');
 
-	            $paymentMessage = 'Fill in the fields to complete the payment';
-	            $paymentImage = 'https://happyfridaypruebas.factoriadigitalpremium.es/pub/static/version1541079571/frontend/Abbacus/happyfriday/en_GB/Sistel_Redsys/images/icon_cards.png';
+	            if ($paymentCode == 'paypal_billing_agreement') {
+		            $paymentMessage = $paypalMessage;
+		            $paymentImage = $paypalImage;
+	            }
+	        	else if ($paymentCode == 'redsys') {
+		            $paymentMessage = $redsysMessage;
+		            $paymentImage = $redsysImage;
+	            }
+	            else {
+	            	$paymentMessage = '';
+		            $paymentImage = '';
+	            }
 
 	            $paymentMethods[] = array(
 	                'label' => $paymentTitle,
@@ -74,6 +95,10 @@ class DefaultConfigProvider
         	//}
         }
 
+        $selectedShippingRate = $result['selectedShippingMethod']['base_amount'];
+        $selectedShippingRate = number_format((float)$selectedShippingRate, 2, '.', '');
+
+		$result['selectedShippingRate'] = '$'.$selectedShippingRate;
 		$result['activeShippingMethods'] = $shippingMethods;
 		$result['activePaymentMethods'] = $paymentMethods;
 

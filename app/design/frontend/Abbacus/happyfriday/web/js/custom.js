@@ -1,5 +1,21 @@
 require(['jquery','owl_carousel'],function($){
 	jQuery(document).ready(function(){
+
+		// change shipping method on onepage checkout on click of radio button
+		jQuery('body').on('click', '.custom-shipping-method-list .shipping-method-code', function(){
+			var shippingMethodCode = jQuery(this).val();
+			jQuery('#iwd_opc_shipping_method_group').val(shippingMethodCode).trigger('change');
+		});
+		// END - change shipping method on onepage checkout on click of radio button
+
+		// change payment method on onepage checkout on click of radio button
+		jQuery('body').on('click', '.custom-payment-method-list .payment-method-code', function(){
+			var paymentMethodCode = jQuery(this).val();
+			jQuery('#iwd_opc_payment_method_select').val(paymentMethodCode).trigger('change');
+		});
+		// END - change payment method on onepage checkout on click of radio button
+
+
 		jQuery('.product.info.detailed .product.data.items .data.item.title:first-child').click();
 		 jQuery(window).on('scroll', stickyheader);
 		function stickyheader() {

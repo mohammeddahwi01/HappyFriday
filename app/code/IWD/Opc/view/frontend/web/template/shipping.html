@@ -80,6 +80,31 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="custom-shipping-method-list">
+                            <!-- ko foreach: window.checkoutConfig.activeShippingMethods -->
+                                <div class="custom-shipping-method">
+                                    <div class="custom-shipping-method-title">
+                                            <div class="custom-radio-container">
+                                                    <input type="radio"
+                                                            class="shipping-method-code"
+                                                            name="custom_shipping_method"
+                                                            data-bind="value: value" />
+                                                    <div class="checkmark"></div>
+                                            </div>
+                                            <label>
+                                                <span data-bind="text: label"></span>
+                                            </label>
+                                            <span class="shipping-rate" data-bind="text: window.checkoutConfig.selectedShippingRate"></span>
+
+                                    </div>
+                                    <div class="custom-shipping-method-message">
+                                        <span data-bind="text: message"></span>
+                                    </div>
+                                </div>
+                            <!-- /ko -->
+                        </div>
+
                         <div id="onepage-checkout-shipping-method-additional-load" class="iwd_opc_universal_wrapper">
                             <!-- ko foreach: getRegion('shippingAdditional') -->
                             <!-- ko template: getTemplate() --><!-- /ko -->

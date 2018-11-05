@@ -22,4 +22,27 @@
     <div repeat="foreach: paymentGroupsList, item: '$group'">
         <each args="data: getRegion($group().displayArea), as: 'method'" render=""/>
     </div>
+    <div class="custom-payment-method-list">
+        <!-- ko foreach: window.checkoutConfig.activePaymentMethods -->
+            <div class="custom-payment-method">
+                <div class="custom-payment-method-title">
+                    <div class="custom-radio-container">
+                        <input type="radio" class="payment-method-code" name="custom_payment_method" data-bind="value: value" />
+                        <div class="checkmark"></div>
+                    </div>
+                    <label>
+                        <img data-bind="attr:{src: image}" />
+                        <span data-bind="text: label"></span>
+                    </label>
+
+                </div>
+                
+                <div class="custom-payment-method-message">
+                    <span data-bind="text: message"></span>
+                </div>
+                    
+                
+            </div>
+        <!-- /ko -->
+    </div>
 </div>
