@@ -11,7 +11,8 @@ require(['jquery','owl_carousel'],function($){
 		// change payment method on onepage checkout on click of radio button
 		jQuery('body').on('click', '.custom-payment-method-list .payment-method-code', function(){
 			var paymentMethodCode = jQuery(this).val();
-			jQuery('#iwd_opc_payment_method_select').val(paymentMethodCode).trigger('change');
+			//jQuery('#iwd_opc_payment_method_select').val(paymentMethodCode).trigger('change');
+			jQuery('#iwd_opc_payment_method_select').next().find('div[data-value='+paymentMethodCode+']').trigger('click');
 		});
 		// END - change payment method on onepage checkout on click of radio button
 

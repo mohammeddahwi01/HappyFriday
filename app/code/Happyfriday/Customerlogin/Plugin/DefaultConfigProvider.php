@@ -32,7 +32,7 @@ class DefaultConfigProvider
         Config $paymentModelConfig,
         \Magento\Shipping\Model\Config $shipconfig,
         \Magento\Store\Model\StoreManagerInterface $storeManager,
-        \Magento\Directory\Model\CurrencyFact‌​ory $currency
+        \Magento\Directory\Model\Currency $currency
     ) {
  
         $this->_appConfigScopeConfigInterface = $appConfigScopeConfigInterface;
@@ -50,8 +50,8 @@ class DefaultConfigProvider
 		$activeCarriers = $this->shipconfig->getActiveCarriers();
         $storeScope = \Magento\Store\Model\ScopeInterface::SCOPE_STORE;
 
-        $currencyCode = $storeManager->getStore()->getCurrentCurrencyCode();
-        $currencyData = $this->_currency->create()->load($currencyCode);
+        $currencyCode = $this->storeManager->getStore()->getCurrentCurrencyCode();
+        $currencyData = $this->_currency->load($currencyCode);
         $currencySymbol = $currencyData->getCurrencySymbol();
 
 		$defaultPaymentMethod = $this->_appConfigScopeConfigInterface->getValue('iwd_opc/extended/default_payment_method');
