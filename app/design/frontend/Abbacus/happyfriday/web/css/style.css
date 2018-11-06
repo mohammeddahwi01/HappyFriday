@@ -4303,7 +4303,7 @@ html .action.primary:hover {
 .categorypath- #page-title-heading {display: none;}
 .product-item-brandname a{ font-weight: bold; }
 #minicart-content-wrapper .paypal-logo, .cart-container .paypal-logo {display: none;}
-#iwd_opc_discount {display: none;} 
+
 
 #shopping-cart-table .control.qty {position: relative;} 
 a.addQty { background-color: #53565a; border: medium none; border-radius: 0; box-shadow: none; color: #ffffff; cursor: pointer; font-size: 12px; font-weight: normal; height: 18px; line-height: 18px; padding: 0; position: absolute; text-align: center; top: -7px; width: 30px; }
