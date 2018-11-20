@@ -74,29 +74,29 @@ switch ($type = $block->getType()) {
             $description = false;
         }
         break;
-	 // case 'recently_viewed':
-		// /** @var \Magento\Catalog\Block\Product\ProductList\Related $block */
-		// if ($exist = $block->getProductCollection()) { 
+	 case 'recently_viewed':
+		/** @var \Magento\Catalog\Block\Product\ProductList\Related $block */
+		if ($exist = $block->getProductCollection()) { 
 			
-		// 	$type = 'related';
-		// 	//$mode = 'grid';
-		// 	//$type = $type . ' ' . $mode;
-		// 	$class = $type;
+			$type = 'related';
+			//$mode = 'grid';
+			//$type = $type . ' ' . $mode;
+			$class = $type;
 			
-		// 	$image = 'recently_viewed_products_grid_content_widget';
-		// 	$title = __('Recently Viewed');
-		// 	$items = $exist;
-		// 	$limit = 0;
-  //           $shuffle = 0;
+			$image = 'recently_viewed_products_grid_content_widget';
+			$title = __('Recently Viewed');
+			$items = $exist;
+			$limit = 0;
+            $shuffle = 0;
 			
-  //           $showWishlist = $displaySocial['display_wishlist'];
-  //           $showCompare = $displaySocial['display_compare'];
-  //           $showCart = true;
-  //           $templateType = null;
-  //           $description = false;
-  //           $canItemsAddToCart = false;
-		// }
-		// break;
+            $showWishlist = $displaySocial['display_wishlist'];
+            $showCompare = $displaySocial['display_compare'];
+            $showCart = true;
+            $templateType = null;
+            $description = false;
+            $canItemsAddToCart = false;
+		}
+		break;
     case 'upsell-rule':
         if ($exist = $block->hasItems()) {
             $type = 'upsell';
