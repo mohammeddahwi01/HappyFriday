@@ -353,6 +353,7 @@
     left: 0;
     top: 50%;
     z-index: 5;
+    display: none;
 }
 
 .product.media .prev-next-link .previous i,.product.media .prev-next-link .next i {
@@ -2767,12 +2768,18 @@ div[data-element-id="iwd_opc_shipping_method_rates"] {
 
 
 @media (max-width: 767px) {
+	
+	.breadcrumbs {
+		display: block; 
+	}
+
 	.page-header.stickyonmobile {
 		position: fixed;
 		z-index: 5;
 		top: 0;
 		left: 0;
 		width: 100%;
+		padding-bottom: 10px;
 	}
 	.minicart-wrapper .action.showcart {
 		height: 25px;
@@ -2817,8 +2824,12 @@ div[data-element-id="iwd_opc_shipping_method_rates"] {
 	}
 	.panel.header.top {
 		float: left;
+		/*display: none;*/
 		border: none;
 		padding-top: 0 !important;
+	}
+	.panel.header.top .block.block-search {
+		display: none;
 	}
 	.panel.header.bottom {
 		margin-right: 5px;
@@ -2953,8 +2964,8 @@ div[data-element-id="iwd_opc_shipping_method_rates"] {
 		transform: none !important;
 	}
 	.catalog-product-view #amasty-gallery-images .amasty-gallery-thumb-link {
-		height: 15px !important;
-		width: 15px !important;
+		height: 10px !important;
+		width: 10px !important;
 		padding: 0;
 		margin: 0 7px;
 		border-radius: 100%;

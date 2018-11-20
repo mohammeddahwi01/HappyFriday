@@ -3749,7 +3749,7 @@ select:focus{outline: none; box-shadow: none !important;}
   z-index: 3;
 }
 .catalog-product-view .magebuzz-social {
-  display: block;
+  display: none;
   left: -38px;
   position: absolute;
   top: 51%;

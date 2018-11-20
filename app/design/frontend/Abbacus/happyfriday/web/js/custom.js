@@ -18,7 +18,7 @@ require(['jquery','owl_carousel'],function($){
 
 
 		jQuery('.product.info.detailed .product.data.items .data.item.title:first-child').click();
-		 jQuery(window).on('scroll', stickyheader);
+		jQuery(window).on('scroll', stickyheader);
 		function stickyheader() {
 			// if(jQuery(window).scrollTop() > 50) {
 			// 	jQuery('.page-header').addClass('sticky');
@@ -56,6 +56,7 @@ require(['jquery','owl_carousel'],function($){
 		if(!(window.matchMedia("(min-width: 768px)").matches)) {
 			jQuery(window).off('scroll', stickyheader);
 			jQuery(window).on('scroll', stickymobileheader);
+			jQuery('.panel.header.top .block.block-search').appendTo('.headerwrapper');
 		}
 		else {
 			jQuery(window).on('scroll', stickyheader);
@@ -63,9 +64,9 @@ require(['jquery','owl_carousel'],function($){
 		}
 		
 		//search toggle in header 
-		jQuery('.panel.wrapper .block-search .label').on('click',function(){
-			jQuery(this).next('.control').slideToggle();
-		});
+		// jQuery('.panel.wrapper .block-search .label').on('click',function(){
+		// 	jQuery(this).next('.control').slideToggle();
+		// });
 
 
 		// toggle review form on product view page
@@ -81,10 +82,10 @@ require(['jquery','owl_carousel'],function($){
 			jQuery('.catalog-topnav.amasty-catalog-topnav').slideToggle();
 			jQuery(this).toggleClass('expanded');
 		});
-
-
-
 	});
+
+
+
 
 	jQuery(window).load(function(){
 		//product view page javascript

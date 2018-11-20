@@ -237,7 +237,7 @@ body .page-header .panel.wrapper {  width: auto; margin: 0px;  float: right;}
 
 .block-search .label {  margin: 0;}
 
-.block-search .control {  display: none;}
+.block-search .control {  display: block;}
 
 .panel.header.top { width: auto !important;border-left: 1px solid #92928a;  border-right: 1px solid #92928a;  float: right;  padding: 8px 0 0 10px !important;}
 
@@ -373,7 +373,7 @@ body .page-header .panel.wrapper {  width: auto; margin: 0px;  float: right;}
 
 .page-layout-2columns-left .column.main {  width: 100%;}
 
-.page-products .page-title-wrapper h1 {  font-size: 24px; padding: 17px 0; text-align: center;}
+.page-products .page-title-wrapper h1 {  font-size: 24px; padding: 0 0 17px; text-align: center;}
 
 .page-products .columns {  padding-top: 0;}
 
@@ -713,7 +713,14 @@ body .page-header .panel.wrapper {  width: auto; margin: 0px;  float: right;}
 
 .minicart-wrapper .block-minicart::before {  right: 96px;}
 
-.block-search .control {  position: absolute;  right: -25px;  top: 30px;  width: 200px;}
+.block-search .control {position:static; margin-right: 10px; top:0px; margin-left: 10px; width: auto;}
+
+.block-search .action.search {display: block;position: absolute;background: none;line-height: normal;box-shadow: none;right: 20px;font-size: 0;top: -2px;padding: 0; border:none;}
+
+
+.block-search .action.search:before {-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;font-size: 16px;line-height: 32px;color: #757575;content: '\e615';
+    font-family: 'luma-icons';margin: 0;vertical-align: top;display: inline-block;font-weight: normal;overflow: hidden;speak: none;text-align: center;
+}
 
 .page-header .block-search input:focus {  box-shadow: none;}
 
@@ -779,7 +786,7 @@ body .page-header .panel.wrapper {  float: right;  margin:0px;  width:auto;  pad
   padding: 7px 10px;
   width: 100%;
 }
-.block-search .label::before{ color: #000; font-size: 17px;   position: relative; right: -3px;}
+.block-search .label::before{ color: #000; font-size: 17px;   position: relative; right: 10px; content: none;}
 
 .header.links li:nth-child(3){background:url("../images/user.png") no-repeat 95% center #514f40; background-size:22px;border-bottom: transparent;}
 .header.links li:nth-child(2){background:url("../images/group-user.png") no-repeat 95% center #514f40; background-size:22px;border-bottom: transparent;}

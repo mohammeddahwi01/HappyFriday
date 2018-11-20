@@ -103,5 +103,7 @@
 		<move element="product.info.details" destination="product.info.main" after="-" />
 		<move element="custom.review.wrapper" destination="page.wrapper" after="main.content" />
 		<referenceBlock name="reviews.tab" remove="true"/>
+		<!-- <referenceBlock name="product.info.review" remove="true"/> -->
     </body>
 </page>
+		

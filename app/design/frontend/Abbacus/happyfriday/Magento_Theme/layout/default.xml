@@ -9,6 +9,7 @@
     <body>
     	<referenceContainer name="header.container" htmlClass="page-header sticky">
 			<container name="new.header.wrapper" as="new-container" before="-" htmlClass="headerwrapper" htmlTag="div" />
+			 <!-- <block class="Magento\Framework\View\Element\Template" name="custom.top.search" as="topSearch" template="Magento_Search::form.mini.phtml" after="-" /> -->
 		</referenceContainer>
 		<referenceContainer name="header.panel">
             <container name="header.panel.top" label="Page Header Panel Top" htmlTag="div" htmlClass="panel header top" />
