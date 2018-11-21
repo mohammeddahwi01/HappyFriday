@@ -70,8 +70,8 @@ require(['jquery','owl_carousel'],function($){
 
 
 		// toggle review form on product view page
-		jQuery('.custom-review-wrapper .add-review .review-form-toggle').on('click',function(){
-			jQuery('.custom-review-wrapper .review-form').toggle();
+		jQuery('body').on('click','.add-review .review-form-toggle',function(){
+			jQuery(this).parent().next('.review-form').toggle();
 		});
 
 
