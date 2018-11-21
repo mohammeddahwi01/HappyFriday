@@ -76,14 +76,14 @@
 		</referenceContainer>
 		<move element="product.info.previousnext" destination="product.info.media" before="socialshare"/>
 		<referenceContainer name="content.aside">
-			<block class="WeltPixel\OwlCarouselSlider\Block\Slider\Products" before="-" name="recently_viewed" cacheable="false" template="WeltPixel_OwlCarouselSlider::product/list/items.phtml">
+			<!-- <block class="WeltPixel\OwlCarouselSlider\Block\Slider\Products" before="-" name="recently_viewed" cacheable="false" template="WeltPixel_OwlCarouselSlider::product/list/items.phtml">
 	            <action method="setType">
 	                <argument name="products_type" xsi:type="string">recently_viewed</argument>
 	            </action>
 				<action method="setData">
 	                <argument name="products_type" xsi:type="string">recently_viewed</argument>
 	            </action>
-	        </block>
+	        </block> -->
 	        <container name="custom.review.wrapper" htmlTag="div" htmlClass="custom-review-wrapper">
 		        <container name="custom.review.container" htmlTag="div" htmlClass="custom-review-container">
 			        <block class="Magento\Review\Block\Product\View\ListView" name="custom.review.list" template="Magento_Review::product/view/list.phtml"/>

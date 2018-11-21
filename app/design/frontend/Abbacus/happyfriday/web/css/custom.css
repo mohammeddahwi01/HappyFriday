@@ -40,14 +40,21 @@
 }
 
 .panel.header.bottom .link.wishlist a:after {
-	content: "Mis favoritos";
+	/*content: "Mis favoritos";
 	display: block;
 	white-space: nowrap;
 	position: absolute;
 	bottom: -24px;
 	left: 50%;
 	transform: translateX(-50%);
-	-webkit-transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);*/
+}
+
+.panel.header.bottom .link.wishlist a .wishlist-text{
+	position: absolute;
+    bottom: -25px;
+    white-space: nowrap;
+    left: -23px;
 }
 
 .panel.header.bottom .link.wishlist a:hover:after {
@@ -128,6 +135,7 @@
 
 .contactinfo .rightdiv .switcher-label {
 	font-weight: normal;
+	display: none;
 }
 
 .contactinfo .rightdiv .switcher-trigger strong {
@@ -339,12 +347,16 @@
 
 #amasty-main-container > .zoomWrapper {
 	width: 100% !important;
+	padding-top: 100%;
 }
 
 #amasty-main-image {
 	min-height: 100%;
 	min-width: 100%;
 	object-fit: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 
 .product.media .prev-next-link {
@@ -387,6 +399,7 @@
 	max-width: 700px;
 	margin: auto;
 	overflow: hidden;
+	display: none;
 }
 
 .amasty-gallery-thumb-link {
@@ -2057,7 +2070,7 @@ div[data-element-id="iwd_opc_shipping_method_rates"] {
 }
 
 .cms-home .owl-carousel-custom-2, .cms-home .owl-carousel-custom-3 {
-	height: 500px; 
+	height: 625px; 
 }
 
 .cms-home .custom-slider {
