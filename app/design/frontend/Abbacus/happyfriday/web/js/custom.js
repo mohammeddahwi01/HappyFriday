@@ -82,23 +82,74 @@ require(['jquery','owl_carousel'],function($){
 			jQuery('.catalog-topnav.amasty-catalog-topnav').slideToggle();
 			jQuery(this).toggleClass('expanded');
 		});
+	
+
+		
+		//product viewpage custom arrow click functionality
+
+		var cntid = setInterval(imgcheck,1000); // set an interval to check if slick images have been loaded
+		function imgcheck() {
+			if(jQuery('.amasty-gallery-thumb-link').find('img').height()>0) {
+				jQuery('.amasty-gallery-thumb-link').eq(0).click();
+				clearInterval(cntid);
+			}
+		}
+			
+		jQuery('.custom-arrow-container').on('click',function(e){
+			e.stopPropagation();
+		})
+
+		jQuery('.custom-arrow-container .left-arrow a').on('click',function(e){
+			var index = jQuery('.amasty-gallery-thumb-link.active').index();
+			if(index == 0) {
+				jQuery('.amasty-gallery-thumb-link').eq(jQuery('.amasty-gallery-thumb-link').length-1).click();
+			}
+			else{
+				jQuery('.amasty-gallery-thumb-link').eq(index-1).click();
+			}
+		});
+
+		jQuery('.custom-arrow-container .right-arrow a').on('click', function(){
+			var index = jQuery('.amasty-gallery-thumb-link.active').index();
+			if(index == (jQuery('.amasty-gallery-thumb-link').length-1)) {
+				jQuery('.amasty-gallery-thumb-link').eq(0).click();
+			}
+			else{
+				jQuery('.amasty-gallery-thumb-link').eq(index+1).click();
+			}
+		});
+	
 	});
-
-
-
+			
 
 	jQuery(window).load(function(){
-		//product view page javascript
-		var index = 0;
-		setInterval(function(){
-			jQuery('#amasty-gallery-images .amasty-gallery-thumb-link').eq(index).click();
-			index++;
-			if (index == jQuery('#amasty-gallery-images .amasty-gallery-thumb-link').length) {
-				index = 0;
+		var clickid = setInterval(autoclick,10000);
+		function autoclick() {
+			var index = jQuery('.amasty-gallery-thumb-link.active').index();
+			if (index == (jQuery('#amasty-gallery-images .amasty-gallery-thumb-link').length - 1)) {
+				jQuery('#amasty-gallery-images .amasty-gallery-thumb-link').eq(0).click();
+			} else {
+				jQuery('#amasty-gallery-images .amasty-gallery-thumb-link').eq(index+1).click();
 			}
-		},5000);
+		}
 	});
+			
 });
+
+				
+
+
+
+
+
+			
+			
+	
+		
+
+			
+
+		
 	
 
 

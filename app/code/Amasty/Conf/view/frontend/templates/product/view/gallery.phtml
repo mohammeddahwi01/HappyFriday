@@ -35,7 +35,12 @@
             loader.style.paddingBottom = ( config.height / config.width * 100) + "%";
         </script>
 
-        <div id="amasty-main-container" data-gallery-role="amasty-main-container"></div>
+        <div id="amasty-main-container" data-gallery-role="amasty-main-container">
+        	<div class="custom-arrow-container">
+        		<div class="left-arrow"><a href="javascript:void(0)"><i class="fa fa-angle-left"></i></a></div>
+        		<div class="right-arrow"><a href="javascript:void(0)"><i class="fa fa-angle-right"></i></a></div>
+        	</div>
+        </div>
         <div id="amasty-gallery-container"  data-gallery-role="amasty-gallery-container">
             <div class="amasty-gallery-label"><h2><!-- We can add any label like "More Views" --></h2></div>
             <div id="amasty-gallery-images"  data-gallery-role="amasty-gallery-images"></div>

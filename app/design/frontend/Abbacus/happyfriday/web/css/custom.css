@@ -345,6 +345,54 @@
 	margin: auto;
 }
 
+#amasty-main-container .custom-arrow-container {
+	position: absolute;
+	left: 20px;
+	right: 20px;   
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+}
+
+#amasty-main-container .custom-arrow-container > div {
+	height: 29px;
+	width: 29px;
+	background-color: rgba(255,255,255,0.6);
+	border-radius: 100%;
+	text-align:center;
+	position: relative;
+}
+	
+
+#amasty-main-container .custom-arrow-container > div:hover {
+	background-color: rgba(255,255,255,1.0);
+}
+
+#amasty-main-container .custom-arrow-container > div a {
+	display: block;
+	height: 100%;
+}
+
+#amasty-main-container .custom-arrow-container > div.left-arrow {
+	float: left;
+}
+
+#amasty-main-container .custom-arrow-container > div.right-arrow {
+	float: right;
+}
+
+#amasty-main-container .custom-arrow-container > div i {
+	font-size: 20px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+}
+	
 #amasty-main-container > .zoomWrapper {
 	width: 100% !important;
 	padding-top: 100%;
