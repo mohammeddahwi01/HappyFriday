@@ -133,6 +133,23 @@ $gridvar = (int) $this->getRequest()->getParam($param);
                                 <?= /* @escapeNotVerified */ $brandValue ?>
                                 </a>    
                             </strong>
+                            <!--product lable-->
+                            <?php
+				                $_getMyAttr = $_product->getResource()->getAttribute('product_lable');
+				                $attrValue = $_getMyAttr->getFrontend()->getValue($_product);
+				                // echo "<pre>";
+				                // print_r($attrValue->getText());exit;
+						                if ($attrValue != 'No'){
+						                        ?>
+						               	<div class="product-lable">
+						                  <?php 
+						                 echo  $attrValue;
+						                   ?>
+						               			 </div>
+						                <?php
+						                 }
+				                    ?>
+                            <!--product lable-->
                             <?php
                                 $_productNameStripped = $block->stripTags($_product->getName(), null, true);
                             ?>
