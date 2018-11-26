@@ -2220,6 +2220,16 @@ div[data-element-id="iwd_opc_shipping_method_rates"] {
 	display:inline;
 }
 
+.product-lable.outlet {
+    top: 15px;
+    z-index: 2;
+    right: -7px;
+}
+
+ .main-tag + .product-lable.outlet {
+ 	top: 50px;
+ }
+
 .product-item-photo {
 	text-align:center;
 	display:block;
