@@ -423,7 +423,7 @@ body .page-header .panel.wrapper {  width: auto; margin: 0px;  float: right;}
 
 .catalog-product-view.page-layout-1column .product.media {  padding-left: 20px;  padding-right: 20px;  width: 100%;}
 
-.catalog-product-view.page-layout-1column .product-info-main { padding: 0 20px; width: 100%;}
+.catalog-product-view.page-layout-1column .product-info-main { padding: 10px 20px; width: 100%;}
 
 .catalog-product-view .product.info.detailed {  width: 100%;}
 

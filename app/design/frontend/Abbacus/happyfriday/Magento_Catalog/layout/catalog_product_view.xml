@@ -12,8 +12,14 @@
         <!-- <move element="product.info.review" destination="product.info.main" before="product.info.price"/> -->
 		<move element="socialshare" destination="product.info.media" before="skip_gallery_after.target"/>
 		<referenceContainer name="product.info.main">
-			<container name="product.info.custom.left" before="-" htmlTag="div" htmlClass="left-items"></container>
-			<container name="product.info.custom.right" after="product.info.custom.left" htmlTag="div" htmlClass="right-items"></container>
+			<container name="product.info.custom.left" before="-" htmlTag="div" htmlClass="left-items">
+				<container name="product.info.custom.message" htmlTag="div" htmlClass="pro-msg">
+					<block class="Magento\Catalog\Block\Product\View" name="product.qty.low.message" template="Magento_Catalog::product/view/lowqtymessage.phtml" cacheable="false">
+					</block>
+				</container>
+			</container>
+			<container name="product.info.custom.right" after="product.info.custom.left" htmlTag="div" htmlClass="right-items">
+			</container>
 			<block class="Magento\Catalog\Block\Product\View\Description" name="product.info.brand" template="Magento_Catalog::product/view/attribute.phtml" before="-">
 				<arguments>
 					<argument name="at_call" xsi:type="string">getBrand</argument>
@@ -98,6 +104,7 @@
 		<move element="page.main.title" destination="product.info.custom.left" after="product.info.brand" />
 		<move element="product.info.stock.sku" destination="product.info.custom.left" after="page.main.title" />
 		<move element="product.info.price" destination="product.info.custom.left" after="product.info.stock.sku" />
+		<move element="product.info.custom.message" destination="product.info.custom.left" after="product.info.price" />
 		<move element="product.info.review" destination="product.info.custom.right" before="-" />
 		<move element="product.info.addto" destination="product.info.custom.right" after="product.info.review" />
 		<move element="product.info.details" destination="product.info.main" after="-" />

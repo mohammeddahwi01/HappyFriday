@@ -87,71 +87,95 @@ require(['jquery','owl_carousel'],function($){
 		
 		//product viewpage custom arrow click functionality
 
-		var cntid = setInterval(imgcheck,1000); // set an interval to check if slick images have been loaded
-		function imgcheck() {
-			if(jQuery('.amasty-gallery-thumb-link').find('img').height()>0) {
-				jQuery('.amasty-gallery-thumb-link').eq(0).click();
-				clearInterval(cntid);
-			}
-		}
+
+		// var cntid = setInterval(imgcheck,1000); // set an interval to check if slick images have been loaded
+
+		// function imgcheck() {
+		// 	if(jQuery('.amasty-gallery-thumb-link').find('img').length>0) {
+		// 		jQuery('.amasty-gallery-thumb-link').eq(0).click();
+		// 		clearInterval(cntid);
+		// 	}
+		// }
+
+
+		
 			
 		jQuery('.custom-arrow-container').on('click',function(e){
 			e.stopPropagation();
 		})
 
 		jQuery('.custom-arrow-container .left-arrow a').on('click',function(e){
-			var index = jQuery('.amasty-gallery-thumb-link.active').index();
-			if(index == 0) {
-				jQuery('.amasty-gallery-thumb-link').eq(jQuery('.amasty-gallery-thumb-link').length-1).click();
-			}
-			else{
-				jQuery('.amasty-gallery-thumb-link').eq(index-1).click();
-			}
-		});
-
-		jQuery('.custom-arrow-container .right-arrow a').on('click', function(){
-			var index = jQuery('.amasty-gallery-thumb-link.active').index();
-			if(index == (jQuery('.amasty-gallery-thumb-link').length-1)) {
-				jQuery('.amasty-gallery-thumb-link').eq(0).click();
-			}
-			else{
-				jQuery('.amasty-gallery-thumb-link').eq(index+1).click();
-			}
-		});
-	
-	});
+				var count = 0;	
+				jQuery('.amasty-gallery-thumb-link').each(function(){
+					if(jQuery(this).hasClass('active')) {
+						count++;
+					}
+				});
 			
+				if(count == 0) {
+					jQuery('.amasty-gallery-thumb-link').eq(jQuery('.amasty-gallery-thumb-link').length-1).click();
+				}
+				
+				else if(count != 0){
+					var index = jQuery('.amasty-gallery-thumb-link.active').index();
+					if(index == 0) {
+						jQuery('.amasty-gallery-thumb-link').eq(jQuery('.amasty-gallery-thumb-link').length-1).click();
+					}
+					else{
+						jQuery('.amasty-gallery-thumb-link').eq(index-1).click();
+					}
+				}
+		});
+			
+		jQuery('.custom-arrow-container .right-arrow a').on('click', function(){
+			
+			var count = 0;	
+			jQuery('.amasty-gallery-thumb-link').each(function(){
+				if(jQuery(this).hasClass('active')) {
+					count++;
+				}
+			});
 
+			if(count == 0) {
+				jQuery('.amasty-gallery-thumb-link').eq(1).click();
+			}
+					
+			else if(count != 0) {
+				var index = jQuery('.amasty-gallery-thumb-link.active').index();
+				if(index == (jQuery('.amasty-gallery-thumb-link').length-1)) {
+					jQuery('.amasty-gallery-thumb-link').eq(0).click();
+				}
+				else{
+					jQuery('.amasty-gallery-thumb-link').eq(index+1).click();
+				}
+			}
+		});
+	});
+		
+
+			
 	jQuery(window).load(function(){
-		var clickid = setInterval(autoclick,10000);
+		var clickid = setInterval(autoclick,5000);
+		var cnt = 0;
 		function autoclick() {
-			var index = jQuery('.amasty-gallery-thumb-link.active').index();
-			if (index == (jQuery('#amasty-gallery-images .amasty-gallery-thumb-link').length - 1)) {
+			jQuery('.amasty-gallery-thumb-link').each(function(){
+				if(jQuery(this).hasClass('active')) {
+					cnt++;
+				}
+			});
+
+			if (cnt == 0) {
 				jQuery('#amasty-gallery-images .amasty-gallery-thumb-link').eq(0).click();
-			} else {
-				jQuery('#amasty-gallery-images .amasty-gallery-thumb-link').eq(index+1).click();
+			}
+			
+			else {
+				var index = jQuery('.amasty-gallery-thumb-link.active').index();
+				if (index == (jQuery('#amasty-gallery-images .amasty-gallery-thumb-link').length - 1)) {
+					jQuery('#amasty-gallery-images .amasty-gallery-thumb-link').eq(0).click();
+				} else {
+					jQuery('#amasty-gallery-images .amasty-gallery-thumb-link').eq(index+1).click();
+				}
 			}
 		}
 	});
-			
-});
-
-				
-
-
-
-
-
-			
-			
-	
-		
-
-			
-
-		
-	
-
-
-
-
+});			
